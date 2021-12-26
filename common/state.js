@@ -1,8 +1,7 @@
 const fs = require("fs");
 const players = require("../data/players.json");
 const celebs = require("../data/celebs.json");
-const customBonuses = require("../data/bonuses-custom.json");
-const thirdPartyBonuses = require("../data/bonuses-third-party.json");
+const bonuses = require("../data/bonuses.json");
 const path = "data/saved-state.json";
 
 var state = {
@@ -10,8 +9,7 @@ var state = {
     players: null,
     celebs: null,
     playerKeys: null,
-    bonuses: null,
-    thirdPartyBonuses: null
+    bonuses: null
 };
 
 const loadState = () => {
@@ -36,8 +34,7 @@ exports.init = () => {
         };
         state.players = players;
         state.celebs = celebs;
-        state.bonuses = customBonuses;
-        state.thirdPartyBonuses = thirdPartyBonuses;
+        state.bonuses = bonuses;
     
         for(let player of Object.keys(state.players)) {
             state.players[player].picks.forEach(pick => {
@@ -73,9 +70,6 @@ exports.getState = () => {
         ],
         bonuses: {
             ...state.bonuses
-        },
-        thirdPartyBonuses: {
-            ...state.thirdPartyBonuses
         }
     };
 }

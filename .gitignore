@@ -62,3 +62,5 @@ typings/
 
 # Manually added
 archive/
+.env.dev
+.env.prod

@@ -16,13 +16,13 @@ module.exports = {
     const state = stateFuncs.getState();
     let bonus = "";
 
-    if(!state.bonuses[bonusKey] && !state.thirdPartyBonuses[bonusKey]) {
+    if(!state.bonuses[bonusKey]) {
         msg.channel.send(`Bonus with ID ${bonusKey} was not found.`);
         return;
     } else if (!state.celebs[celebId]) {
         msg.channel.send(`Celeb with ID ${celebId} was not found.`);
     } else {
-        bonus = (state.bonuses[bonusKey] || state.thirdPartyBonuses[bonusKey]);
+        bonus = (state.bonuses[bonusKey]);
     }
 
     const inputIds = args.slice(2);

@@ -26,7 +26,7 @@ module.exports = {
       if (bonuses.length > 0) {
         wonSomething = true;
         bonuses.forEach((bonusKey) => {
-          let bonus = state.bonuses[bonusKey] || state.thirdPartyBonuses[bonusKey]
+          let bonus = state.bonuses[bonusKey];
           let celebs = format.stringCommaList(
             player.bonuses[bonusKey].celebs.map((x) => state.celebs[x].name)
           );

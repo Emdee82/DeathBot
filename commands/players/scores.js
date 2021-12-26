@@ -17,7 +17,7 @@ module.exports = {
       if (players[playerId].bonuses) {
         let bonusKeys = Object.keys(players[playerId].bonuses);
         bonusKeys.forEach(bonusKey => {
-          let bonus = state.bonuses[bonusKey] || state.thirdPartyBonuses[bonusKey];
+          let bonus = state.bonuses[bonusKey];
           score = score + (bonus.points * players[playerId].bonuses[bonusKey].times);
         });
       }

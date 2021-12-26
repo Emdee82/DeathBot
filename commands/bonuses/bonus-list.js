@@ -34,23 +34,10 @@ module.exports = {
         }
     }
 
-    const allowedArgs = ["all", "custom", "thirdparty"]
-
-    if(!args || !args[0] || !allowedArgs.includes(args[0].toLowerCase())) {
-        error.usage("!bonus-list [custom|thirdParty|all]", msg);
-        return;
-    }
-
     msg.channel.send(format.bold("The Available Bonuses"));
 
     const currentState = stateFuncs.getState();
 
-    if (args[0].toLowerCase() === "all" || args[0].toLowerCase() === "custom") {
-        printBonuses(currentState.bonuses);
-    }
-
-    if (args[0].toLowerCase() === "all" || args[0].toLowerCase() === "thirdparty") {
-        printBonuses(currentState.thirdPartyBonuses);
-    }
+    printBonuses(currentState.bonuses);
   },
 };
