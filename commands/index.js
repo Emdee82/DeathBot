@@ -1,0 +1,23 @@
+module.exports = {
+    CommandList: require("./command-list"),
+    Celebs: require("./celebs/celebs"),
+    Celeb: require("./celebs/celeb"),
+    Include: require("./celebs/include"),
+    Exclude: require("./celebs/exclude"),
+    AddCeleb: require("./celebs/add-celeb"),
+    State: require("./state/state"),
+    SaveState: require("./state/save-state"),
+    LoadState: require("./state/load-state"),
+    Kill: require("./celebs/kill"),
+    Scores: require("./players/scores"),
+    Picks: require("./players/picks"),
+    Resurrect: require("./celebs/resurrect"),
+    SetPoints: require("./points/set-points"),
+    AddPoints: require("./points/add-points"),
+    SubPoints: require("./points/sub-points"),
+    BonusList: require("./bonuses/bonus-list"),
+    Bonuses: require("./bonuses/bonuses"),
+    Award: require("./bonuses/award-bonus"),
+    Revoke: require("./bonuses/revoke-bonus"),
+    Puppet: require("./puppet")
+};

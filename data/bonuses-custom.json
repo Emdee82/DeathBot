@@ -1,0 +1,12 @@
+{
+    "cust-bon1": {
+        "name": "A Custom Bonus",
+        "description": "Some arbitrary custom bonus, for illustrative purposes.",
+        "points": 10
+    },
+    "cust-bon2": {
+        "name": "Some Other Custom Bonus",
+        "description": "As above, but with DOUBLE POINTS!",
+        "points": 20
+    }
+}

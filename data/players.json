@@ -1,0 +1,21 @@
+{
+    "a-player-example": {
+        "name": "A Player",
+        "userId": "APlayer#1234",
+        "basePoints": 0,
+        "picks": [
+            "a-celebrity-example"
+         ],
+        "bonuses": {}
+    },
+    "another-player-example": {
+        "name": "Another Player",
+        "userId": "AnotherPlayer#1234",
+        "basePoints": 0,
+        "picks": [
+            "a-celebrity-example",
+            "another-celebrity-example"
+        ],
+        "bonuses": {}
+    }
+}

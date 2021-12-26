@@ -1,0 +1,68 @@
+{
+    "herman-cain": {
+        "name": "The Herman Cain",
+        "description": "Celebrity dies due to complications from COVID-19.",
+        "points": 19
+    },
+    "solo": {
+        "name": "The Home Solo Pick",
+        "description": "Celebrity is not picked by anyone else.",
+        "points": 25
+    },
+    "first": {
+        "name": "First Blood",
+        "description": "You are the first mourner(s) to get a hit.",
+        "points": 25
+    },
+    "cobain": {
+        "name": "The Kurt Cobain",
+        "description": "Celebrity dies from suicide.",
+        "points": 25
+    },
+    "winehouse": {
+        "name": "The Amy Winehouse",
+        "description": "Celebrity dies from an accidental drug or alcohol overdose. Confirmed by toxicology before the end of the year.",
+        "points": 25
+    },
+    "monthly": {
+        "name": "The Monthly Mortality",
+        "description": "Celebrity dies from the ailment of the month DURING the ailment's awareness month.",
+        "points": 25,
+        "url": "https://www.dougstanhopescelebritydeathpool.com/Home/TheGame"
+    },
+    "egot": {
+        "name": "The EGOT",
+        "description": "Celebrity has any one, or all entertainment awards...Emmy, Grammy, Oscar, Tony.\nAnd since there are many types of each (Emmy: Primetime, Daytime, Sports, News, etc.), to simplfy the qualifiers - if a celebrity has the word 'Emmy', 'Grammy', 'Oscar' or 'Tony' attached to their CV, they qualify for the bonus.",
+        "points": 25
+    },
+    "tupac": {
+        "name": "The Tupac",
+        "description": "Celebrity dies on Friday the 13th.",
+        "points": 50
+    },
+    "lennon": {
+        "name": "The John Lennon",
+        "description": "Celebrity is murdered. For the purposes of this game \"murder\" is defined as being killed against your will, at the behest of another, while having a reasonable expectation of not being killed. So, by that definition, Law enforcement, spies and military personnel will not qualify, unless they are murdered outside of their profession. And to clarify further, terrorists killed in drone strikes or any other military operation will not count.",
+        "points": 50
+    },
+    "double": {
+        "name": "The Daily Double",
+        "description": "2 celebrities die in the same day (25 points for each celebrity). 3 celebs would be an extra 75 points, etc.",
+        "points": 50
+    },
+    "mgk": {
+        "name": "The Machine Gun Kelly",
+        "description": "Celebrity dies on their birthday.",
+        "points": 75
+    },
+    "skynyrd": {
+        "name": "The Lynyrd Skynyrd",
+        "description": "Celebrity dies in any vehicle crash: Car, Motorcycle, Aircraft, Spacecraft, Hot Air Balloon, etc. This does NOT include being struck by a vehicle. The celebrity must be a passenger.",
+        "points": 75
+    },
+    "last": {
+        "name": "The Last Call",
+        "description": "Celebrity dies on December 31st.",
+        "points": 100
+    }
+}

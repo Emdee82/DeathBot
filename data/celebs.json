@@ -1,0 +1,14 @@
+{
+    "a-celebrity-example": {
+        "name": "Example celebrity",
+        "excludeFromAuto": false,
+        "isAlive": true,
+        "players": []
+    },
+    "another-celebrity-example": {
+        "name": "Some Other Celebrity",
+        "excludeFromAuto": false,
+        "isAlive": true,
+        "players": []
+    }
+}

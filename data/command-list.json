@@ -1,0 +1,48 @@
+{
+    "commands": [
+        {
+            "name": "!commands",
+            "description": "Displays the list of commands"
+        },
+        {
+            "name": "!scores",
+            "description": "Displays the current scoreboard"
+        },
+        {
+            "name": "!picks",
+            "description": "Displays all player picks"
+        },
+        {
+            "name": "!picks [playerId]",
+            "description": "Displays the picks of an individual player"
+        },
+        {
+            "name": "!bonuses",
+            "description": "Displays the bonuses awarded to all players"
+        },
+        {
+            "name": "!bonuses [playerId]",
+            "description": "Displays the bonuses awarded to a particular player"
+        },
+        {
+            "name": "!bonus-list [all|custom|thirdParty]",
+            "description": "Displays the available bonuses"
+        },
+        {
+            "name": "!celeb [search-term]",
+            "description": "Query for a given celeb."
+        },
+        {
+            "name": "!add-celeb [name]",
+            "description": "Add a celeb to the list of those being tracked."
+        },
+        {
+            "name": "!kill [celebId]",
+            "description": "[Debug Only] Kill someone."
+        },
+        {
+            "name": "!resurrect [celebId]",
+            "description": "[Debug Only] Bring someone back from the grave."
+        }
+    ]
+}
