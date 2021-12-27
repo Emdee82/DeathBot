@@ -22,7 +22,7 @@ let voiceChannel = null;
 
 bot.login(TOKEN);
 
-bot.on('ready', () => {
+bot.once('ready', () => {
   console.log(new Date(), `[death-bot]: Bot logged in under username ${bot.user.tag}`);
   bot.user.setPresence({
       game: {

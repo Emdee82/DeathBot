@@ -1,5 +1,4 @@
-const Discord = require('discord.js');
-
+const { MessageEmbed } = require('discord.js');
 const find = require("../../common/find")
 const format = require("../../common/format")
 const error = require("../../common/error")
@@ -32,14 +31,14 @@ module.exports = {
             output = output + "\nPicked by: " + format.stringCommaList(players.map(player => state.players[player].name)) + ".";
           }
 
-          const imageEmbed = new Discord.RichEmbed()
+          const imageEmbed = new MessageEmbed()
             .setImage(imgPath);
 
           console.log("[celeb]: ",imgPath);
     
           let nameHeader = format.bold(state.celebs[celeb].name);
           msg.channel.send((state.celebs[celeb].isAlive ? nameHeader : format.strikethrough(nameHeader)) + " " + format.italic(`(ID: '${celeb}')`));
-          msg.channel.send(imageEmbed).then(() => {
+          msg.channel.send({embeds: [imageEmbed]}).then(() => {
             msg.channel.send(output)
           });
         });

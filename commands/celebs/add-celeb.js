@@ -29,19 +29,6 @@ module.exports = {
       return;
     }
 
-    //// RLNTS-2
-    //// **** OLD CODE THAT CREATED A NUMBERED DUPLICATE - YOU MAY REINSTATE IF YOU WANT THIS BEHAVIOUR ****
-    // let match = null;
-    // let counter = 1;
-    // do {
-    //   // Add incrementing number until unique ID found
-    //   match = find.findCeleb([celeb], msg, stateFuncs, true);
-    //   if (match) {
-    //     celeb = newId + counter;
-    //     counter = counter + 1;
-    //   }
-    // } while (match);
-
     newId = celeb;
 
     const newCeleb = {
