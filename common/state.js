@@ -2,6 +2,7 @@ const fs = require("fs");
 const players = require("../data/players.json");
 const celebs = require("../data/celebs.json");
 const bonuses = require("../data/bonuses.json");
+const privilegedUsers = require("../data/privileged-users.json");
 const path = "data/saved-state.json";
 
 var state = {
@@ -9,7 +10,8 @@ var state = {
     players: null,
     celebs: null,
     playerKeys: null,
-    bonuses: null
+    bonuses: null,
+    privilegedUsers: null
 };
 
 const loadState = () => {
@@ -35,6 +37,7 @@ exports.init = () => {
         state.players = players;
         state.celebs = celebs;
         state.bonuses = bonuses;
+        state.privilegedUsers = privilegedUsers;
     
         for(let player of Object.keys(state.players)) {
             state.players[player].picks.forEach(pick => {
@@ -70,6 +73,9 @@ exports.getState = () => {
         ],
         bonuses: {
             ...state.bonuses
+        },
+        privilegedUsers: {
+            ...state.privilegedUsers
         }
     };
 }
@@ -87,11 +93,10 @@ exports.updatePlayer = (id, player) => {
 }
 
 exports.saveState = () => {
-    //// RLNTS-0 - UNCOMMENT THIS!!!!!!
-    // state.metadata.lastUpdated = new Date();
-    // fs.writeFile(path, JSON.stringify(state), {flag: "w"}, (err) => { 
-    //     if (err) throw err;
-    // });
+    state.metadata.lastUpdated = new Date();
+    fs.writeFile(path, JSON.stringify(state), {flag: "w"}, (err) => { 
+        if (err) throw err;
+    });
 }
 
 exports.addCeleb = (id, celeb) => {

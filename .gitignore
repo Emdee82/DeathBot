@@ -62,5 +62,4 @@ typings/
 
 # Manually added
 archive/
-.env.dev
-.env.prod
+todo.txt

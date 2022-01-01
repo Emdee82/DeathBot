@@ -19,5 +19,5 @@ module.exports = {
     Bonuses: require("./bonuses/bonuses"),
     Award: require("./bonuses/award-bonus"),
     Revoke: require("./bonuses/revoke-bonus"),
-    Puppet: require("./puppet")
+    Say: require("./say")
 };
