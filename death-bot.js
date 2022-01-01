@@ -4,7 +4,7 @@ const botCommands = require('./commands');
 const stateFuncs = require("./common/state");
 const jobManager = require("./jobs/job-manager");
 
-const bot = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
+const bot = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES", "DIRECT_MESSAGES"], partials: ["CHANNEL"] });
 bot.commands = new Discord.Collection();
 
 Object.keys(botCommands).map(key => {
@@ -25,9 +25,12 @@ bot.login(TOKEN);
 bot.once('ready', () => {
   console.log(new Date(), `[death-bot]: Bot logged in under username ${bot.user.tag}`);
   bot.user.setPresence({
-      game: {
-        name: "Chess"
-      }
+      activities: [
+        {
+          name: "Chess",
+          type: "PLAYING"
+        }
+      ]
   });
   
   console.log(new Date(), "[death-bot]: Establishing channel connections...");
