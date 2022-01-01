@@ -27,7 +27,7 @@ exports.findCeleb = (lookupKeys, msg, stateFuncs, noSpeak) => {
 }
 
 // lookupKey = Single string key
-exports.findPlayer = (lookupKey, msg, stateFuncs) => {
+exports.findPlayer = (lookupKey, msg, stateFuncs, noSpeak) => {
   var state = stateFuncs.getState();
   if(!state.players[state.playerKeys[lookupKey]]) {
     // Some other name passed (username maybe?) or partial match
@@ -35,12 +35,27 @@ exports.findPlayer = (lookupKey, msg, stateFuncs) => {
     var matches = keys.filter(key => (state.players[key].name.toLowerCase().includes(lookupKey.toLowerCase())) || (state.players[key].userId.toLowerCase().includes(lookupKey.toLowerCase())));
 
     if (matches.length === 0) {
-      msg.channel.send("I didn't recognise " + lookupKey + " - try one of the following:\n" + state.playerKeys.join("\n"));
+      if (!noSpeak) {
+        msg.channel.send("I didn't recognise " + lookupKey + " - try one of the following:\n" + state.playerKeys.join("\n"));
+      }
       return null;
     } else {
       return matches[0];
     }
   } else {
     return lookupKey;
+  }
+}
+
+exports.findPlayerByUsername = (username, discriminator, stateFuncs) => {
+  var state = stateFuncs.getState();
+  var lookupKey = username + "#" + discriminator;
+  var keys = Object.keys(state.players);
+  var matches = keys.filter(key => (state.players[key].userId == lookupKey));
+
+  if (matches.length === 0) {
+    return null;
+  } else {
+    return matches[0];
   }
 }

@@ -11,6 +11,7 @@ module.exports = {
     Kill: require("./celebs/kill"),
     Scores: require("./players/scores"),
     Picks: require("./players/picks"),
+    Pick: require("./players/pick"),
     Resurrect: require("./celebs/resurrect"),
     SetPoints: require("./points/set-points"),
     AddPoints: require("./points/add-points"),

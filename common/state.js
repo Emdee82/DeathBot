@@ -92,6 +92,20 @@ exports.updatePlayer = (id, player) => {
     };
 }
 
+exports.addPlayer = (id, player) => {
+    state.players = {
+        ...state.players,
+        [id]: player
+    }
+
+    state.playerKeys = [
+        ...state.playerKeys,
+        id
+    ]
+
+    this.saveState();
+}
+
 exports.saveState = () => {
     state.metadata.lastUpdated = new Date();
     fs.writeFile(path, JSON.stringify(state), {flag: "w"}, (err) => { 
@@ -104,6 +118,8 @@ exports.addCeleb = (id, celeb) => {
         ...state.celebs,
         [id]: celeb
     }
+
+    this.saveState();
 }
 
 exports.loadState = () => loadState();
