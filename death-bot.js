@@ -20,6 +20,22 @@ let server = null;
 let channel = null;
 let voiceChannel = null;
 
+const isRestrictedCommand = (cmd, msg) => {
+  if (!cmd.restrictionLevel) {
+    return false;
+  }
+
+  var currentState = stateFuncs.getState();
+  var user = currentState.privilegedUsers[msg.author.username];
+
+  if (!user || user.discriminator != msg.author.discriminator || cmd.restrictionLevel < user.restrictionLevel) {
+    msg.reply("You are not allowed to execute this restricted command.");
+    return true;
+  }
+  
+  return false;
+}
+
 bot.login(TOKEN);
 
 bot.once('ready', () => {
@@ -51,7 +67,11 @@ bot.on('messageCreate', msg => {
 
   try {
     let botCommand = bot.commands.get(command);
-    if (botCommand && command === "!ppt") {
+    if (isRestrictedCommand(botCommand, msg)) {
+      return;
+    }
+
+    if (botCommand && command === "!say") {
       botCommand.execute(channel, args);
     } else {
       botCommand.execute(msg, args, stateFuncs);
