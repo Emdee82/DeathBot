@@ -1,7 +1,7 @@
-const find = require("../../common/find");
-const format = require("../../common/format");
 const error = require("../../common/error");
 const image = require("../../common/image-search");
+const celebAdder = require("../../common/add-celeb");
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
   name: "!add-celeb",
@@ -16,28 +16,15 @@ module.exports = {
     console.log("[add-celeb]: ", args);
     console.log("[add-celeb]: ", celebName);
 
-    // Normalise name and create new ID
-    let newId = celebName
-      .toLowerCase()
-      .replace(/\s/g, "-")
-      .replace(/[^a-z_-]+/g, "");
-
-    // Check if ID already exists
-    let celeb = newId;
-    if (find.findCeleb([celeb], msg, stateFuncs, true)) {
-      msg.channel.send(`This person is already on my list - ID: ${newId}`);
-      return;
-    }
-
-    newId = celeb;
-
-    const newCeleb = {
-      name: celebName,
-      isAlive: true,
-      players: [],
-    };
-    
-    stateFuncs.addCeleb(newId, newCeleb);
+    let newId = celebAdder.addCeleb(stateFuncs, msg, celebName);
     msg.channel.send(`${celebName} has now been added to my list. (ID: ${newId})`);
-  },
-};
+
+    image.getImage(celebName)
+    .then(imgPath => {
+        const imageEmbed = new MessageEmbed()
+        .setImage(imgPath);
+
+        msg.channel.send({embeds: [imageEmbed]});
+    });
+  }
+}
