@@ -47,6 +47,11 @@ module.exports = {
     }
 
     let player = {...state.players[playerId]};
+    if (player.picks.includes(celeb)) {
+        msg.reply(`You've already picked ${celebName}.`);
+        return;
+    }
+
     player.picks = [
         ...player.picks,
         celeb

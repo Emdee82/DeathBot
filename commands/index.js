@@ -4,6 +4,7 @@ module.exports = {
     Award: require("./bonuses/award-bonus"),
     Bonuses: require("./bonuses/bonuses"),
     BonusList: require("./bonuses/bonus-list"),
+    CarryOver: require("./players/carry-over"),
     Celeb: require("./celebs/celeb"),
     Celebs: require("./celebs/celebs"),
     CommandList: require("./command-list"),
