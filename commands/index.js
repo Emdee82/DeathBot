@@ -17,6 +17,7 @@ module.exports = {
     Pick: require("./players/pick"),
     Picks: require("./players/picks"),
     Resurrect: require("./celebs/resurrect"),
+    RemovePick: require("./players/remove-pick"),
     Revoke: require("./bonuses/revoke-bonus"),
     SaveState: require("./state/save-state"),
     Say: require("./say"),

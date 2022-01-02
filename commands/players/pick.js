@@ -19,7 +19,7 @@ module.exports = {
     }
 
     if (!args || !args[0]) {
-      error.usage("pick [name]", msg);
+      error.usage("!pick [name]", msg);
       return;
     }
 
