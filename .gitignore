@@ -63,3 +63,4 @@ typings/
 # Manually added
 archive/
 todo.txt
+*state.json

@@ -4,6 +4,7 @@ const celebs = require("../data/celebs.json");
 const bonuses = require("../data/bonuses.json");
 const privilegedUsers = require("../data/privileged-users.json");
 const path = "data/saved-state.json";
+const newYearPath = "data/new-year-backup-state.json";
 
 var state = {
     metadata: null,
@@ -104,6 +105,14 @@ exports.addPlayer = (id, player) => {
     ]
 
     this.saveState();
+}
+
+exports.saveNewYearState = () => { 
+    console.log(new Date(), "[state]: Resetting state for New Year - backing up old state to ", newYearPath);
+    state.metadata.lastUpdated = new Date();
+    fs.writeFile(newYearPath, JSON.stringify(state), {flag: "w"}, (err) => { 
+        if (err) throw err;
+    });
 }
 
 exports.saveState = () => {

@@ -58,6 +58,7 @@ module.exports = {
         ...newCeleb.players,
         playerId
     ];
+    stateFuncs.updateCeleb(celeb, newCeleb);
 
     msg.channel.send(`${format.bold(state.players[playerId].name)} has picked ${format.bold(celebName)}`);
 
