@@ -18,6 +18,10 @@ module.exports = {
         let keys = Object.keys(bonuses);
         let count = 0;
 
+        if (args[0] === "new") {
+            keys = keys.filter(k => bonuses[k].isNew);
+        }
+
         keys.forEach(key => {
             addBonus(bonuses[key].name, bonuses[key].description, bonuses[key].points, key, bonuses[key].url)            
             count = count + 1;
@@ -34,7 +38,7 @@ module.exports = {
         }
     }
 
-    msg.channel.send(format.bold("The Available Bonuses"));
+    msg.channel.send(format.bold(`The ${args[0] === "new" ? "New" : "Available"} Bonuses`));
 
     const currentState = stateFuncs.getState();
 

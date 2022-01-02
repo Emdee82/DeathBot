@@ -35,14 +35,24 @@
         {
             "name": "!add-celeb [name]",
             "description": "Add a celeb to the list of those being tracked."
+        }
+    ],
+    "newCommands": [
+        {
+            "name": "!pick [name]",
+            "description": "Adds a given celebrity to your list (also joins the game for new players)."
         },
         {
-            "name": "!kill [celebId]",
-            "description": "[Debug Only] Kill someone."
-        },
+            "name": "!remove-pick [name]",
+            "description": "Removes a given celebrity to your list."
+        },        
         {
-            "name": "!resurrect [celebId]",
-            "description": "[Debug Only] Bring someone back from the grave."
+            "name": "!carry-over",
+            "description": "Carries over all of your surviving picks from last year."
+        },        
+        {
+            "name": "!old-picks [player (optional)]",
+            "description": "See last year's picks to refresh your memory."
         }
     ]
 }

@@ -12,11 +12,23 @@ module.exports = {
         commandListString = commandListString + "\n\n" + cmd + ":\n" + description;
       }
 
-      commandList.commands.forEach(cmd => {
-        addCommand(cmd.name, cmd.description);
-      });
+      if (args[0] !== "new") {
+        commandList.commands.forEach(cmd => {
+          addCommand(cmd.name, cmd.description);
+        });
 
-      msg.channel.send(commandListHeader + format.codeBlock(commandListString, "autohotkey"));
+        msg.channel.send(commandListHeader + format.codeBlock(commandListString, "autohotkey"));
+      }
+
+      if (commandList.newCommands?.length > 0) {
+        commandListHeader = format.bold("New Commands for This Year");
+        commandListString = "";
+        commandList.newCommands.forEach(cmd => {
+          addCommand(cmd.name, cmd.description);
+        });
+        msg.channel.send(commandListHeader + format.codeBlock(commandListString, "autohotkey"));
+      }
+      
       msg.channel.send("You can send these to me via private message too if you like.");
     },
 };
