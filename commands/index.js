@@ -12,6 +12,7 @@ module.exports = {
     Kill: require("./celebs/kill"),
     LoadState: require("./state/load-state"),
     NewYear: require("./state/new-year"),
+    OldPicks: require("./players/old-picks"),
     Pick: require("./players/pick"),
     Picks: require("./players/picks"),
     Resurrect: require("./celebs/resurrect"),
