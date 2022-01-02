@@ -4,6 +4,7 @@ const error = require("../../common/error");
 module.exports = {
     name: '!include',
     description: 'Include a previously excluded celeb in the automated wiki search',
+    restrictionLevel: 2,
     execute(msg, args, stateFuncs) {
       if (!args || !args[0]) {        
         error.usage("!include id", msg);

@@ -5,6 +5,7 @@ const error = require("../../common/error");
 module.exports = {
   name: "!sub-points",
   description: "Subtract a given value from a player's base points (doesn't apply to bonuses)",
+  restrictionLevel: 1,
   execute(msg, args, stateFuncs) {
     if (!(args && args[0] && args[1])) {
       error.usage("!setPoints [points] [playerId]", msg);

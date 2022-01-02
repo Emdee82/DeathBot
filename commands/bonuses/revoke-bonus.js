@@ -5,6 +5,7 @@ const format = require("../../common/format");
 module.exports = {
   name: "!revoke",
   description: "Revoke a bonus to given player(s)",
+  restrictionLevel: 1,
   execute(msg, args, stateFuncs) {
     if(!args || args.length < 3) {
         error.usage("!revoke [bonusId] [celebId] [playerId1 playerId2...]", msg);

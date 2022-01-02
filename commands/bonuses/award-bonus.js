@@ -5,6 +5,7 @@ const format = require("../../common/format");
 module.exports = {
   name: "!award",
   description: "Award a bonus to given player(s)",
+  restrictionLevel: 2,
   execute(msg, args, stateFuncs) {
     if(!args || args.length < 3) {
         error.usage("!award [bonusId] [celebId] [playerId1 playerId2...]", msg);
