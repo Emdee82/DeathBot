@@ -17,15 +17,17 @@ module.exports = {
 
     playerKeys
       .forEach((playerId) => {
-        let output = format.bold(players[playerId].name);
+        if (players[playerId].lastYearPicks) {
+          let output = format.bold(players[playerId].name);
 
-        for (let i = 0; i < players[playerId].lastYearPicks.length; i++) {
-          let celeb = currentState.celebs[players[playerId].lastYearPicks[i]];
-          output = output +
-            "\n" + (i+1) + ". " + (celeb.isAlive ? celeb.name : (format.strikethrough(celeb.name)));
+          for (let i = 0; i < players[playerId].lastYearPicks.length; i++) {
+            let celeb = currentState.celebs[players[playerId].lastYearPicks[i]];
+            output = output +
+              "\n" + (i+1) + ". " + (celeb.isAlive ? celeb.name : (format.strikethrough(celeb.name)));
+          }
+
+          msg.channel.send(output + "\n");
         }
-
-        msg.channel.send(output + "\n");
       });
 
   },
