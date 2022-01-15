@@ -71,11 +71,7 @@ bot.on('messageCreate', msg => {
       return;
     }
 
-    if (botCommand && command === "!say") {
-      botCommand.execute(channel, args);
-    } else {
-      botCommand.execute(msg, args, stateFuncs);
-    }
+    botCommand.execute(msg, args, stateFuncs, channel);    
   } catch (error) {
     console.error(error);
     msg.reply("An error occurred with this command, causing it to fail.");

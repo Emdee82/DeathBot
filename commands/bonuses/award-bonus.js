@@ -6,7 +6,7 @@ module.exports = {
   name: "!award",
   description: "Award a bonus to given player(s)",
   restrictionLevel: 2,
-  execute(msg, args, stateFuncs) {
+  execute(msg, args, stateFuncs, channel) {
     if(!args || args.length < 3) {
         error.usage("!award [bonusId] [celebId] [playerId1 playerId2...]", msg);
         return;
@@ -69,6 +69,6 @@ module.exports = {
 
     let winners = state.playerKeys.filter(x => playerIds.includes(x)).map(winner => state.players[winner].name);
     const winnerList = format.stringCommaList(winners);
-    msg.channel.send(`'${format.bold(bonus.name)}' has been awarded to ${winnerList} for a bonus of ${bonus.points} ${winners.length > 1 ? "points each" : "points"} for picking ${state.celebs[celebId].name}. Congratulations.`);
+    channel.send(`'${format.bold(bonus.name)}' has been awarded to ${winnerList} for a bonus of ${bonus.points} ${winners.length > 1 ? "points each" : "points"} for picking ${state.celebs[celebId].name}. Congratulations.`);
   },
 };

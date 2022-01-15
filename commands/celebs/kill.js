@@ -6,15 +6,19 @@ module.exports = {
     name: '!kill',
     description: 'Kill a celeb by ID',
     restrictionLevel: 2,
-    execute(msg, args, stateFuncs) {
+    execute(msg, args, stateFuncs, channel) {
       if (!args || !args[0]) {
         error.usage("!kill id", msg);
         return;
       }
 
       let celeb = find.findCeleb(args, msg, stateFuncs);
+      if (!celeb) {
+        return;
+      }
+
       let age = args.join(" ").match(/\d+/);
 
-      killer.kill(celeb, stateFuncs, (x) => msg.channel.send(x), age ? age[0] : undefined);
+      killer.kill(celeb, stateFuncs, (x) => channel.send(x), age ? age[0] : undefined);
     },
 };

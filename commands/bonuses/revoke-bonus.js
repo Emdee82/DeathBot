@@ -6,7 +6,7 @@ module.exports = {
   name: "!revoke",
   description: "Revoke a bonus to given player(s)",
   restrictionLevel: 1,
-  execute(msg, args, stateFuncs) {
+  execute(msg, args, stateFuncs, channel) {
     if(!args || args.length < 3) {
         error.usage("!revoke [bonusId] [celebId] [playerId1 playerId2...]", msg);
         return;
@@ -66,6 +66,6 @@ module.exports = {
 
     let winners = state.playerKeys.filter(x => playerIds.includes(x)).map(winner => state.players[winner].name);
     const winnerList = format.stringCommaList(winners);
-    msg.channel.send(`'${format.bold(bonus.name)}' has been revoked from ${winnerList} and ${bonus.points} points deducted${winners.length > 1 ? " each." : "."}`);
+    channel.send(`'${format.bold(bonus.name)}' has been revoked from ${winnerList} and ${bonus.points} points deducted${winners.length > 1 ? " each." : "."}`);
   },
 };

@@ -5,7 +5,7 @@ module.exports = {
     name: '!resurrect',
     description: 'Resurrect a celeb by ID',
     restrictionLevel: 2,
-    execute(msg, args, stateFuncs) {
+    execute(msg, args, stateFuncs, channel) {
       if (!args || !args[0]) {        
         error.usage("!resurrect id", msg);
         return;
@@ -13,10 +13,13 @@ module.exports = {
 
       const currentState = stateFuncs.getState();
       let celebId = find.findCeleb(args, msg, stateFuncs);
+      if (!celeb) {
+        return;
+      }
 
       var celeb = {...currentState.celebs[celebId]};
       celeb.isAlive = true;
       stateFuncs.updateCeleb(celebId, celeb);
-      msg.channel.send(celeb.name + " lives once more!");
+      channel.send(celeb.name + " lives once more!");
     },
 };
