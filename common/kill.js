@@ -62,7 +62,7 @@ exports.kill = (id, stateFuncs, senderFunc, age) => {
     
             if (losers.length > 0) {
                 const loserString = format.stringCommaList(losers.map(loser => currentState.players[loser].name));
-                senderFunc(`Commiserations to ${loserString}, who briefly considered this pick before changing their mind.`);
+                senderFunc(`Commiserations to ${loserString}, who considered this pick in the past before changing their mind.`);
             }
         });
     });

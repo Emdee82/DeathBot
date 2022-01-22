@@ -69,6 +69,11 @@ module.exports = {
 
     let winners = state.playerKeys.filter(x => playerIds.includes(x)).map(winner => state.players[winner].name);
     const winnerList = format.stringCommaList(winners);
-    channel.send(`'${format.bold(bonus.name)}' has been awarded to ${winnerList} for a bonus of ${bonus.points} ${winners.length > 1 ? "points each" : "points"} for picking ${state.celebs[celebId].name}. Congratulations.`);
+
+    if (bonus.points >= 0) {
+        channel.send(`'${format.bold(bonus.name)}' has been awarded to ${winnerList} for a bonus of ${bonus.points} ${winners.length > 1 ? "points each" : "points"} for picking ${state.celebs[celebId].name}. Congratulations.`);
+    } else {
+        channel.send(`'${format.bold(bonus.name)}' has been applied to ${winnerList} for a penalty of ${bonus.points} ${winners.length > 1 ? "points each" : "points"}.`);
+    }
   },
 };

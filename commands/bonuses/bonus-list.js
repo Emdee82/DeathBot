@@ -8,7 +8,7 @@ module.exports = {
     let bonusString = "";
 
     const addBonus = (name, description, points, key, url) => {
-        bonusString = bonusString + "\n\n" + format.bold(name + " (+" + points + ")\n") + description + " (key: " + key + ")";
+        bonusString = bonusString + "\n\n" + format.bold(name + " (" + (points >= 0 ? "+" : "") + points + ")\n") + description + " (key: " + key + ")";
         if (url) {
             bonusString = bonusString + "\n" + format.italic(`(More details: ${url} )`);
         }

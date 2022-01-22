@@ -66,6 +66,6 @@ module.exports = {
 
     let winners = state.playerKeys.filter(x => playerIds.includes(x)).map(winner => state.players[winner].name);
     const winnerList = format.stringCommaList(winners);
-    channel.send(`'${format.bold(bonus.name)}' has been revoked from ${winnerList} and ${bonus.points} points deducted${winners.length > 1 ? " each." : "."}`);
+    channel.send(`'${format.bold(bonus.name)}' has been revoked from ${winnerList} and ${Math.abs(bonus.points)} points ${bonus.points >= 0 ? "deducted" : "added"}${winners.length > 1 ? " each." : "."}`);
   },
 };
