@@ -5,8 +5,7 @@ exports.findCeleb = (lookupKeys, msg, stateFuncs, noSpeak) => {
 
     if(lookupKeys.length > 1 || !state.celebs[celeb]) {
       // Someone gave firstname lastname lookupKeys, so need to search for it...
-      var keys = Object.keys(state.celebs);
-      // var matches = keys.filter(key => state.celebs[key].name.toLowerCase().includes(lookupKeys[0].toLowerCase()) && state.celebs[key].name.toLowerCase().includes(lookupKeys[1].toLowerCase()));
+      var keys = Object.keys(state.celebs);      
       var matches = keys.filter(key => lookupKeys.every(lookupKey => state.celebs[key].name.toLowerCase().includes(lookupKey.toLowerCase())));
 
       if (matches.length === 0) {

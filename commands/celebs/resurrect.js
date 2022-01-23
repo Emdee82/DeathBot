@@ -13,7 +13,7 @@ module.exports = {
 
       const currentState = stateFuncs.getState();
       let celebId = find.findCeleb(args, msg, stateFuncs);
-      if (!celeb) {
+      if (!celebId) {
         return;
       }
 

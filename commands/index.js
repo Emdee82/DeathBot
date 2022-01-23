@@ -2,6 +2,7 @@ module.exports = {
     AddCeleb: require("./celebs/add-celeb"),
     AddPoints: require("./points/add-points"),
     Award: require("./bonuses/award-bonus"),
+    Blacklist: require("./celebs/blacklist"),
     Bonuses: require("./bonuses/bonuses"),
     BonusList: require("./bonuses/bonus-list"),
     CarryOver: require("./players/carry-over"),

@@ -19,8 +19,21 @@ const checkList = (stateFuncs, entries, channel) => {
                 }
 
                 if (searchTerms.every(term => entry.text.includes(term))) {
+                  let blacklisted = false;
+                  if (state.celebs[celeb].blacklist && state.celebs[celeb].blacklist.length > 0) {
+                     state.celebs[celeb].blacklist.every(blk => {
+                       let blacklistSearch = blk.split(" ");
+
+                       if (blacklistSearch.every(term => entry.text.includes(term))) {
+                          blacklisted = true;
+                       }
+                     });
+                  }
+
+                  if (!blacklisted) {
                     console.log(new Date(), "[poll-wiki]: Processing death notification - "+ state.celebs[celeb].name);
                     killer.kill(celeb, stateFuncs, (x) => channel.send(x), (entry.age >= 10 && entry.age < 120 ? entry.age : null))
+                  }
                 }
             });
         });
