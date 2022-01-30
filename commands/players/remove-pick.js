@@ -2,7 +2,7 @@ require('dotenv').config({ path: `../.env.${process.env.PROD ? "prod" : "dev"}` 
 const error = require("../../common/error");
 const find = require("../../common/find")
 const format = require("../../common/format");
-const PICK_CUTOFF_DATE = new Date(process.env.PICK_CUTOFF_DATE);
+const PICK_CUTOFF_DATE = new Date(process.env.PICK_CUTOFF_DATE + "T23:59:59.999");
 
 module.exports = {
   name: "!remove-pick",

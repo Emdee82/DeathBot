@@ -7,7 +7,7 @@ const playerAdder = require("../../common/add-player");
 const format = require("../../common/format");
 const { MessageEmbed } = require('discord.js');
 const PICK_LIMIT = process.env.PICK_LIMIT;
-const PICK_CUTOFF_DATE = new Date(process.env.PICK_CUTOFF_DATE);
+const PICK_CUTOFF_DATE = new Date(process.env.PICK_CUTOFF_DATE + "T23:59:59.999");
 
 module.exports = {
   name: "!pick",
