@@ -1,12 +1,9 @@
 require('dotenv').config({ path: `../.env.${process.env.PROD ? "prod" : "dev"}` });
-const error = require("../../common/error");
 const find = require("../../common/find")
-const image = require("../../common/image-search");
-const celebAdder = require("../../common/add-celeb");
-const playerAdder = require("../../common/add-player");
 const format = require("../../common/format");
 const PICK_LIMIT = process.env.PICK_LIMIT;
 const PICK_CUTOFF_DATE = new Date(process.env.PICK_CUTOFF_DATE  + "T23:59:59.999");
+const ALLOW_SAME_PICK = process.env.ALLOW_SAME_PICK;
 
 module.exports = {
   name: "!carry-over",
@@ -25,7 +22,7 @@ module.exports = {
     }
 
     var player = {...state.players[playerId]};
-    var oldPicks = player.lastYearPicks.filter(x => state.celebs[x].isAlive);
+    var oldPicks = player.lastYearPicks.filter(x => state.celebs[x].isAlive && (+ALLOW_SAME_PICK || state.celebs[x].players.length === 0));
     console.log(new Date(), "[carry-over]: Carrying over picks for " + msg.author.username);
     let combinedPicks = [
         ...player.picks,
@@ -49,5 +46,13 @@ module.exports = {
     });
 
     msg.channel.send(`${format.bold(state.players[playerId].name)} has carried over all of last year's picks.`);
+
+    if (!(+ALLOW_SAME_PICK)) {
+        var disallowedPicks = player.lastYearPicks.filter(x => state.celebs[x].isAlive && state.celebs[x].players.length > 0);
+        if (disallowedPicks.length > 0) {
+            const winnerString = format.stringCommaList(disallowedPicks.map(pick => state.celebs[pick].name));
+            msg.channel.send(`${winnerString} had already been picked by others this year, so have not been carried over.`);
+        }
+    }
   }
 }

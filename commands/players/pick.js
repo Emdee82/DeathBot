@@ -8,6 +8,7 @@ const format = require("../../common/format");
 const { MessageEmbed } = require('discord.js');
 const PICK_LIMIT = process.env.PICK_LIMIT;
 const PICK_CUTOFF_DATE = new Date(process.env.PICK_CUTOFF_DATE + "T23:59:59.999");
+const ALLOW_SAME_PICK = process.env.ALLOW_SAME_PICK;
 
 module.exports = {
   name: "!pick",
@@ -49,6 +50,11 @@ module.exports = {
     let player = {...state.players[playerId]};
     if (player.picks.includes(celeb)) {
         msg.reply(`You've already picked ${celebName}.`);
+        return;
+    }
+    
+    if (!(+ALLOW_SAME_PICK) && state.celebs[celeb].players.length > 0) {
+        msg.reply(`${celebName} has already been picked by ${format.bold(state.players[state.celebs[celeb].players[0]].name)} - players aren't allowed to have the same pick.`);
         return;
     }
 
