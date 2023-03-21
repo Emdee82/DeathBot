@@ -64,3 +64,4 @@ typings/
 archive/
 todo.txt
 *state.json
+commands/ai/**.txt

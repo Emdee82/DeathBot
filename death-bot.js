@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 const botCommands = require('./commands');
 const stateFuncs = require("./common/state");
 const jobManager = require("./jobs/job-manager");
+const aiFuncs = require("./commands/ai/chat-gpt");
 
 const bot = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES", "DIRECT_MESSAGES"], partials: ["CHANNEL"] });
 bot.commands = new Discord.Collection();
@@ -12,6 +13,7 @@ Object.keys(botCommands).map(key => {
 });
 
 const TOKEN = process.env.TOKEN;
+const BOT_USER_ID = process.env.BOT_USER_ID;
 
 console.log(new Date(), "[death-bot]: Initialising state...");
 stateFuncs.init();
@@ -29,7 +31,7 @@ const isRestrictedCommand = (cmd, msg) => {
   var user = currentState.privilegedUsers[msg.author.username];
 
   if (!user || user.discriminator != msg.author.discriminator || cmd.restrictionLevel < user.restrictionLevel) {
-    msg.reply("You are not allowed to execute this restricted command.");
+    console.error(`Restricted command - ${msg.author.username} attempted to invoke`, cmd);
     return true;
   }
   
@@ -62,6 +64,11 @@ bot.once('ready', () => {
 bot.on('messageCreate', msg => {
   const args = msg.content.split(/ +/);
   const command = args.shift().toLowerCase();
+
+  if (msg.content.includes(`<@${BOT_USER_ID}>`)) {
+    aiFuncs.chatGpt(stateFuncs, msg);
+    return;
+  }
 
   if (!bot.commands.has(command)) return;
 
