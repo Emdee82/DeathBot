@@ -63,6 +63,8 @@ const loadPrompt = (state) => {
     prompt = prompt.replace(/\[STATEREPLACE\]/ig, gameStateInsert);
 }
 
+const breakdownLongMessage = (message) => message.match(/.{1,1950}/g);
+
 exports.chatGpt = async (stateFuncs, msg) => {
   if(+OPENAI_ENABLED) {    
     if (!configuration.apiKey) {
@@ -89,16 +91,20 @@ exports.chatGpt = async (stateFuncs, msg) => {
       });
       
       var responses = completion.data.choices[0].message.content.split(/\r?\n\r?\n/);
+      
       responses.forEach(res => {
         if (res && res.match(/[a-zA-Z0-9]+/)) {
-          msg.channel.send(res.replace(/deathbot/ig, '**DeathBot**'));
+          var resToSend = res.length > 1950 ? breakdownLongMessage(res) : [ res ];
+
+          resToSend.forEach(r => {
+            msg.channel.send(r.replace(/deathbot/ig, '**DeathBot**'));
+          });
         }
       })
     } 
     catch(error) {
       if (error.response) {
         console.error(error.response.status, error.response.data);
-        msg.reply(new Date(), "[chat-gpt]: An error occurred with this command, causing it to fail.");
       } else {
         console.error(new Date(), `[chat-gpt]: Error with OpenAI API request: ${error.message}`);
         msg.reply(new Date(), `[chat-gpt]: Error with OpenAI API request: ${error.message}`);
