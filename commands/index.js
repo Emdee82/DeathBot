@@ -8,6 +8,7 @@ module.exports = {
     CarryOver: require("./players/carry-over"),
     Celeb: require("./celebs/celeb"),
     Celebs: require("./celebs/celebs"),
+    Check: require("./celebs/check"),
     CommandList: require("./command-list"),
     Exclude: require("./celebs/exclude"),
     Include: require("./celebs/include"),

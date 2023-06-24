@@ -15,7 +15,7 @@ module.exports = {
     }
 
     let state = stateFuncs.getState();
-    let playerId = find.findPlayerByUsername(msg.author.username, msg.author.discriminator, stateFuncs);
+    let playerId = find.findPlayerByDiscordId(msg.author.id, stateFuncs);
     if (!playerId) {
         msg.channel.send("You don't have any picks from last year.\nUse the '!pick' command instead to select a pick and join the game.");
         return;

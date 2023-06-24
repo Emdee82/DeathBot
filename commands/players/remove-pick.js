@@ -18,7 +18,7 @@ module.exports = {
       return;
     }
 
-    let playerId = find.findPlayerByUsername(msg.author.username, msg.author.discriminator, stateFuncs);
+    let playerId = find.findPlayerByDiscordId(msg.author.id, stateFuncs);
     if (!playerId) {
         msg.channel.send(`Unable to find player ${format.bold(msg.author.username)}.`);
         return;

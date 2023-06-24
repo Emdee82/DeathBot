@@ -1,7 +1,8 @@
 {
     "a-player-example": {
         "name": "A Player",
-        "userId": "APlayer#1234",
+        "userId": "123456789101112131",
+        "username": "APlayer#1234",
         "basePoints": 0,
         "picks": [
             "a-celebrity-example"
@@ -10,7 +11,8 @@
     },
     "another-player-example": {
         "name": "Another Player",
-        "userId": "AnotherPlayer#1234",
+        "userId": "123456789101112132",
+        "username": "AnotherPlayer#1234",
         "basePoints": 0,
         "picks": [
             "a-celebrity-example",

@@ -28,9 +28,9 @@ const isRestrictedCommand = (cmd, msg) => {
   }
 
   var currentState = stateFuncs.getState();
-  var user = currentState.privilegedUsers[msg.author.username];
+  var user = currentState.privilegedUsers[msg.author.id];
 
-  if (!user || user.discriminator != msg.author.discriminator || cmd.restrictionLevel < user.restrictionLevel) {
+  if (!user || cmd.restrictionLevel < user.restrictionLevel) {
     console.error(`Restricted command - ${msg.author.username} attempted to invoke`, cmd);
     return true;
   }

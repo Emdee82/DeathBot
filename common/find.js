@@ -31,7 +31,7 @@ exports.findPlayer = (lookupKey, msg, stateFuncs, noSpeak) => {
   if(!state.players[state.playerKeys[lookupKey]]) {
     // Some other name passed (username maybe?) or partial match
     var keys = Object.keys(state.players);
-    var matches = keys.filter(key => (state.players[key].name.toLowerCase().includes(lookupKey.toLowerCase())) || (state.players[key].userId.toLowerCase().includes(lookupKey.toLowerCase())));
+    var matches = keys.filter(key => (state.players[key].name.toLowerCase().includes(lookupKey.toLowerCase())) || (state.players[key].username?.toLowerCase()?.includes(lookupKey.toLowerCase())));
 
     if (matches.length === 0) {
       if (!noSpeak) {
@@ -46,11 +46,22 @@ exports.findPlayer = (lookupKey, msg, stateFuncs, noSpeak) => {
   }
 }
 
-exports.findPlayerByUsername = (username, discriminator, stateFuncs) => {
+exports.findPlayerByUsername = (username, stateFuncs) => {
   var state = stateFuncs.getState();
-  var lookupKey = username + "#" + discriminator;
   var keys = Object.keys(state.players);
-  var matches = keys.filter(key => (state.players[key].userId == lookupKey));
+  var matches = keys.filter(key => (state.players[key].userId == username));
+
+  if (matches.length === 0) {
+    return null;
+  } else {
+    return matches[0];
+  }
+}
+
+exports.findPlayerByDiscordId = (id, stateFuncs) => {
+  var state = stateFuncs.getState();
+  var keys = Object.keys(state.players);
+  var matches = keys.filter(key => (state.players[key].id == id));
 
   if (matches.length === 0) {
     return null;

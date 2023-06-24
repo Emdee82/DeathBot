@@ -79,7 +79,7 @@ exports.chatGpt = async (stateFuncs, msg) => {
 
       var messageContent = msg.content.replace(`<@${BOT_USER_ID}>`, 'DeathBot,');
       console.log(new Date(), `[chat-gpt]: ${msg.author.username} has asked:`, messageContent);
-      var sender = state.playerKeys.filter(x => (msg.author.username +'#' + msg.author.discriminator) == state.players[x].userId);
+      var sender = state.playerKeys.filter(x => (msg.author.id == state.players[x].userId));
       
       const completion = await openai.createChatCompletion({
         model: "gpt-3.5-turbo",

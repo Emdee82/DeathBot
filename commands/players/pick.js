@@ -24,9 +24,9 @@ module.exports = {
       return;
     }
 
-    let playerId = find.findPlayerByUsername(msg.author.username, msg.author.discriminator, stateFuncs);
+    let playerId = find.findPlayerByDiscordId(msg.author.id, stateFuncs);
     if (!playerId) {
-        let newUserId = msg.author.username + "#" + msg.author.discriminator;
+        let newUserId = msg.author.id;
         playerId = playerAdder.addPlayer(stateFuncs, msg, msg.author.username, newUserId);
         msg.channel.send(`Welcome to the game, ${format.bold(msg.author.username + "!")}`);
     }
