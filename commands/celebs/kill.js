@@ -8,11 +8,11 @@ module.exports = {
     restrictionLevel: 2,
     execute(msg, args, stateFuncs, channel) {
       if (!args || !args[0]) {
-        error.usage("!kill id", msg);
+        error.usage("!kill id [age]", msg);
         return;
       }
 
-      let celeb = find.findCeleb(args, msg, stateFuncs);
+      let celeb = find.findCeleb([ args[0] ], msg, stateFuncs);
       if (!celeb) {
         return;
       }
