@@ -1,4 +1,5 @@
 const fs = require("fs");
+const prompt = require("../commands/ai/init-prompt");
 const players = require("../data/players.json");
 const celebs = require("../data/celebs.json");
 const bonuses = require("../data/bonuses.json");
@@ -12,7 +13,8 @@ var state = {
     celebs: null,
     playerKeys: null,
     bonuses: null,
-    privilegedUsers: null
+    privilegedUsers: null,
+    chatMessages: []
 };
 
 const loadState = () => {
@@ -77,7 +79,10 @@ exports.getState = () => {
         },
         privilegedUsers: {
             ...state.privilegedUsers
-        }
+        },
+        chatMessages: [
+            ...state.chatMessages
+        ]
     };
 }
 
@@ -129,6 +134,19 @@ exports.addCeleb = (id, celeb) => {
     }
 
     this.saveState();
+}
+
+exports.initMessages = () => {
+    var initPrompt = prompt.initPrompt(state);
+    state.chatMessages = [ { role: "system", content: initPrompt } ]
+}
+
+exports.addMessage = (role, message) => {
+    state.chatMessages = [
+        ...state.chatMessages,
+        { role: role, content: message }
+    ]
+    return [...state.chatMessages];
 }
 
 exports.loadState = () => loadState();

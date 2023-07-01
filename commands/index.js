@@ -11,6 +11,7 @@ module.exports = {
     Check: require("./celebs/check"),
     CommandList: require("./command-list"),
     Exclude: require("./celebs/exclude"),
+    GetChat: require("./ai/get-chat"),
     Include: require("./celebs/include"),
     Kill: require("./celebs/kill"),
     LoadState: require("./state/load-state"),
