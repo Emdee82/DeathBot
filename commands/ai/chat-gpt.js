@@ -27,7 +27,7 @@ exports.chatGpt = async (stateFuncs, msg) => {
       const completion = await openai.createChatCompletion({
         model: "gpt-3.5-turbo",
         messages: state.chatMessages,
-        max_tokens: 1500
+        max_tokens: 3000
       });
       
       var reply = completion.data.choices[0].message.content;
