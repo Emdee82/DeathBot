@@ -30,7 +30,6 @@ exports.chatGpt = async (stateFuncs, msg) => {
         max_tokens: 1500
       });
       
-      // console.log(completion);
       var reply = completion.data.choices[0].message.content;
       state.chatMessages = stateFuncs.addMessage("assistant", reply);
       var responses = reply.split(/\r?\n\r?\n/);

@@ -20,7 +20,7 @@ const checkList = (stateFuncs, entries, channel) => {
                 if (searchTerms.every(term => entry.text.includes(term))) {
                   let blacklisted = false;
                   if (state.celebs[celeb].blacklist && state.celebs[celeb].blacklist.length > 0) {
-                     state.celebs[celeb].blacklist.every(blk => {
+                     state.celebs[celeb].blacklist.forEach(blk => {
                        let blacklistSearch = blk.split(" ");
 
                        if (blacklistSearch.every(term => entry.text.includes(term))) {
@@ -49,9 +49,11 @@ exports.checkWiki = (stateFuncs, channel, isInitial) => {
         .each(function (i, el) {
             let text = $(this).text().replace(/\s\s+/g, ' ');
             let ageMatches = text.match(/\d+/);
+            let age = ageMatches ? ageMatches[0] : null;
+            let celebText = age ? text.substring(0, text.indexOf(age)) : text;
             entries.push({ 
-                text: text, 
-                age: ageMatches ? ageMatches[0] : null
+                text: celebText, 
+                age: age
             });
         });
 
