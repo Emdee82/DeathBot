@@ -30,22 +30,36 @@ exports.chatGpt = async (stateFuncs, msg) => {
         max_tokens: 1250
       });
       
+      var addReplyHistory = true;
       var reply = completion.data.choices[0].message.content;
-      state.chatMessages = stateFuncs.addMessage("assistant", reply);
       var responses = reply.split(/\r?\n\r?\n/);
+      if (responses.length > 1) {
+        addReplyHistory = false;
+      }
       
       responses.forEach(res => {
         if (res && res.match(/[a-zA-Z0-9]+/)) {
-          var resToSend = res.length > 1950 ? breakdownLongMessage(res) : [ res ];
+          var resToSend = [ res ];
+          if (res.length > 1950) {
+            addReplyHistory = false;
+            resToSend = breakdownLongMessage(res);
+          }
 
           resToSend.forEach(r => {
             msg.channel.send(r.replace(/deathbot/ig, '**DeathBot**'));
           });
         }
       })
+
+      // Replies of excessive length excluded to ensure that subsequent requests
+      // don't breach the limit at the ChatGPT model level.
+      if (addReplyHistory) {
+        state.chatMessages = stateFuncs.addMessage("assistant", reply);
+      }
     } 
     catch(error) {
       if (error.response) {
+        msg.reply(`I'm sorry, but you may have to repeat that...\n (OpenAPI Error: \`${error.response?.data?.error?.code}\`)`);
         console.error(error.response.status, error.response.data);
       } else {
         console.error(new Date(), `[chat-gpt]: Error with OpenAI API request: ${error.message}`);

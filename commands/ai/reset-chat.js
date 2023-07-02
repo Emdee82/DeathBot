@@ -5,5 +5,6 @@ module.exports = {
     execute(msg, args, stateFuncs) {
       stateFuncs.initMessages();
       msg.reply('Chat messages reset.');
+      console.log(new Date(), "[reset-chat]: Chat messages reset.");
     },
 };
