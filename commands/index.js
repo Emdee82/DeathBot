@@ -21,6 +21,7 @@ module.exports = {
     Picks: require("./players/picks"),
     Resurrect: require("./celebs/resurrect"),
     RemovePick: require("./players/remove-pick"),
+    ResetChat: require("./ai/reset-chat"),
     Revoke: require("./bonuses/revoke-bonus"),
     SaveState: require("./state/save-state"),
     Say: require("./say"),
