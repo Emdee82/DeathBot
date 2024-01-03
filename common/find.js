@@ -61,7 +61,7 @@ exports.findPlayerByUsername = (username, stateFuncs) => {
 exports.findPlayerByDiscordId = (id, stateFuncs) => {
   var state = stateFuncs.getState();
   var keys = Object.keys(state.players);
-  var matches = keys.filter(key => (state.players[key].id == id));
+  var matches = keys.filter(key => (state.players[key].userId == id));
 
   if (matches.length === 0) {
     return null;
