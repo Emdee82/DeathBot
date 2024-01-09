@@ -9,7 +9,7 @@ module.exports = {
 
     const currentState = stateFuncs.getState();
     const players = currentState.players;
-    let playerKeys = (args && args[0]) ? [find.findPlayer(args[0], msg, stateFuncs)] : currentState.playerKeys;
+    let playerKeys = (args && args[0]) ? [find.findPlayer(args[0], msg, stateFuncs)] : currentState.playerKeys.filter(x => players[x].picks.length > 0);
 
     if(args && args[0] && !players[playerKeys[0]]) {
       return;

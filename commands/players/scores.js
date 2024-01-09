@@ -8,7 +8,7 @@ module.exports = {
 
     const state = stateFuncs.getState();
     const players = state.players;
-    let playerKeys = state.playerKeys;
+    let playerKeys = state.playerKeys.filter(x => players[x].picks.length > 0);
 
     // Calculate total scores
     playerKeys.forEach(playerId => {
