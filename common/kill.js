@@ -18,11 +18,11 @@ exports.kill = (id, stateFuncs, senderFunc, age) => {
     var celeb = {...currentState.celebs[id]};
 
     var winners = celeb.players.filter(playerId => {
-        return currentState.players[playerId].picks.includes(id);
+        return currentState.players[playerId].picks?.includes(id) || false;
     });
 
     var losers = celeb.players.filter(playerId => {
-        return currentState.players[playerId].changed.includes(id);
+        return currentState.players[playerId].changed?.includes(id) || false;
     });
 
     const emojis = [];
