@@ -1,9 +1,11 @@
 const OpenAI = require("openai")
 const OPENAI_ENABLED = process.env.OPENAI_ENABLED;
 const BOT_USER_ID = process.env.BOT_USER_ID;
+const MODEL = process.env.OPENAI_MODEL;
 
 const configuration = new OpenAI.Configuration({
   apiKey: process.env.OPENAI_API_KEY,
+  basePath: "https://api.x.ai/v1",
 });
 const openai = new OpenAI.OpenAIApi(configuration);
 
@@ -25,7 +27,7 @@ exports.chatGpt = async (stateFuncs, msg) => {
       state.chatMessages = stateFuncs.addMessage("user", (sender || "Someone") + " has said the following - reply in character: " + messageContent);
 
       const completion = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
+        model: MODEL,
         messages: state.chatMessages,
         max_tokens: 1250
       });
