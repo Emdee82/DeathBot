@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const botCommands = require('./commands');
 const stateFuncs = require("./common/state");
 const jobManager = require("./jobs/job-manager");
-const aiFuncs = require("./commands/ai/chat-gpt");
+const aiFuncs = require("./commands/ai/ai-picker");
 
 const bot = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES", "DIRECT_MESSAGES"], partials: ["CHANNEL"] });
 bot.commands = new Discord.Collection();
@@ -66,7 +66,7 @@ bot.on('messageCreate', msg => {
   const command = args.shift().toLowerCase();
 
   if (msg.content.includes(`<@${BOT_USER_ID}>`)) {
-    aiFuncs.chatGpt(stateFuncs, msg);
+    aiFuncs.aiPicker(stateFuncs, msg);
     return;
   }
 
