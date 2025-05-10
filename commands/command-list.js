@@ -12,7 +12,7 @@ module.exports = {
         commandListString = commandListString + "\n\n" + cmd + ":\n" + description;
       }
 
-      if (args[0] !== "new") {
+      if (args[0] !== "picks" && args[0] !== "ai") {
         commandList.commands.forEach(cmd => {
           addCommand(cmd.name, cmd.description);
         });
@@ -20,10 +20,19 @@ module.exports = {
         msg.channel.send(commandListHeader + format.codeBlock(commandListString, "autohotkey"));
       }
 
-      if (commandList.newCommands?.length > 0) {
-        commandListHeader = format.bold("New Commands for This Year");
+      if (args[0] !== "ai" && commandList.pickCommands?.length > 0) {
+        commandListHeader = format.bold("Pick List Commands");
         commandListString = "";
-        commandList.newCommands.forEach(cmd => {
+        commandList.pickCommands.forEach(cmd => {
+          addCommand(cmd.name, cmd.description);
+        });
+        msg.channel.send(commandListHeader + format.codeBlock(commandListString, "autohotkey"));
+      }
+
+      if (commandList.aiCommands?.length > 0) {
+        commandListHeader = format.bold("AI Commands");
+        commandListString = "";
+        commandList.aiCommands.forEach(cmd => {
           addCommand(cmd.name, cmd.description);
         });
         msg.channel.send(commandListHeader + format.codeBlock(commandListString, "autohotkey"));

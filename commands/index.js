@@ -1,6 +1,11 @@
+const aiConstants = require("./ai/ai-constants");
+
 module.exports = {
     AddCeleb: require("./celebs/add-celeb"),
     AddPoints: require("./points/add-points"),
+    Ai: require("./ai/get-ai"),
+    Gpt: require("./ai/set-ai")("!gpt", aiConstants.aiModels.GPT),
+    Grok: require("./ai/set-ai")("!grok", aiConstants.aiModels.GROK),
     Award: require("./bonuses/award-bonus"),
     Blacklist: require("./celebs/blacklist"),
     Bonuses: require("./bonuses/bonuses"),

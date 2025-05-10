@@ -3,6 +3,7 @@ const prompt = require("../commands/ai/init-prompt");
 const players = require("../data/players.json");
 const celebs = require("../data/celebs.json");
 const bonuses = require("../data/bonuses.json");
+const aiConstants = require("../commands/ai/ai-constants");
 const privilegedUsers = require("../data/privileged-users.json");
 const path = "data/saved-state.json";
 const newYearPath = "data/new-year-backup-state.json";
@@ -14,7 +15,8 @@ var state = {
     playerKeys: null,
     bonuses: null,
     privilegedUsers: null,
-    chatMessages: []
+    chatMessages: [],
+    aiModel: aiConstants.aiModels.GPT
 };
 
 const loadState = () => {
@@ -25,6 +27,7 @@ const loadState = () => {
         
         if(content && content.length > 0) {
             state = JSON.parse(content);
+            state.aiModel ??= aiConstants.aiModels.GPT;
         }
 
         return true;
@@ -52,6 +55,7 @@ exports.init = () => {
         }
     
         state.playerKeys = Object.keys(players);
+        state.aiModel = aiConstants.aiModels.GPT;
     }
 }
 
@@ -82,7 +86,8 @@ exports.getState = () => {
         },
         chatMessages: [
             ...state.chatMessages
-        ]
+        ],
+        aiModel: state.aiModel
     };
 }
 
@@ -109,6 +114,11 @@ exports.addPlayer = (id, player) => {
         id
     ]
 
+    this.saveState();
+}
+
+exports.updateAiModel = (model) => {
+    state.aiModel = model;
     this.saveState();
 }
 
