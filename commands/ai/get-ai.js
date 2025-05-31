@@ -5,7 +5,7 @@ module.exports = {
   description: "Print the currently selected AI model",
   execute(msg, args, stateFuncs) {
     const state = stateFuncs.getState();
-    let output = `${format.bold("Deathbot")} is currently powered by ${format.bold(state.aiModel)}`;
+    let output = `${format.bold("DeathBot")} is currently powered by ${format.bold(state.aiModel)}`;
     msg.channel.send(output);
   },
 };

@@ -6,6 +6,7 @@ module.exports = {
     Ai: require("./ai/get-ai"),
     Gpt: require("./ai/set-ai")("!gpt", aiConstants.aiModels.GPT),
     Grok: require("./ai/set-ai")("!grok", aiConstants.aiModels.GROK),
+    Paint: require("./ai/paint"),
     Award: require("./bonuses/award-bonus"),
     Blacklist: require("./celebs/blacklist"),
     Bonuses: require("./bonuses/bonuses"),
