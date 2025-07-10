@@ -24,12 +24,13 @@ module.exports = {
           return;
         }
         
+        var prompt = args.join(" ");
+        console.log(new Date(), `[paint]: ${msg.author.username} has asked DeathBot to paint:`, prompt);
         const state = stateFuncs.getState();
-        var sender = format.sentenceCase(state.playerKeys.filter(x => (msg.author.id == state.players[x].userId))[0]);
+        var sender = state.playerKeys.filter(x => (msg.author.id == state.players[x].userId))[0] || msg.author.username;
+        var senderString = format.sentenceCase(sender);
+        state.chatMessages = stateFuncs.addMessage("user", (sender || "Someone") + " has asked DeathBot to paint the following picture: " + prompt);
         const paintClient = paintConfig();
-
-        const prompt = args.join(" ");
-        console.log(new Date(), "[paint]: prompt:", prompt);
 
         try {
           let response = await paintClient.images.generate(
@@ -42,14 +43,12 @@ module.exports = {
           const imageEmbed = new MessageEmbed()
             .setImage(response.data[0].url);
 
-            console.log(new Date(), "[paint]: Response data:",response.data[0].revised_prompt);
-            console.log(new Date(), "[paint]: ************** END Response data");
-
           msg.channel.send({embeds: [imageEmbed]});
-          msg.reply(`${format.bold("DeathBot")} has painted for ${sender}:\n${response.data[0].revised_prompt}`);
+          state.chatMessages = stateFuncs.addMessage("system", `Using a separate AI image generation API call, you 'painted' for ${sender} the following: ${response.data[0].revised_prompt}`);
+          msg.reply(`${format.bold("DeathBot")} has painted for ${senderString}:\n${response.data[0].revised_prompt}`);
         }
         catch(error) {
-          msg.reply(`Unable to paint something like "${prompt}" for ${sender} - ${error.error}`);
+          msg.reply(`Unable to paint something like "${prompt}" for ${senderString} - ${error.error}`);
         }
       } else {
           console.log(new Date(), "[paint]: AI disabled.");

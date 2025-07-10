@@ -38,7 +38,7 @@ exports.openApi = async (stateFuncs, msg, openai, model) => {
     })
 
     // Replies of excessive length excluded to ensure that subsequent requests
-    // don't breach the limit at the ChatGPT model level.
+    // don't breach the limit at the AI model level.
     if (addReplyHistory) {
       state.chatMessages = stateFuncs.addMessage("assistant", reply);
     }
