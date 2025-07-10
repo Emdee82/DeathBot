@@ -10,14 +10,14 @@ exports.openApi = async (stateFuncs, msg, openai, model) => {
     var sender = state.playerKeys.filter(x => (msg.author.id == state.players[x].userId));
     state.chatMessages = stateFuncs.addMessage("user", (sender || "Someone") + " has said the following - reply in character: " + messageContent);
 
-    const completion = await openai.createChatCompletion({
+    const completion = await openai.chat.completions.create({
       model: model,
       messages: state.chatMessages,
       max_tokens: 1250
     });
     
     var addReplyHistory = true;
-    var reply = completion.data.choices[0].message.content;
+    var reply = completion.choices[0].message.content;
     var responses = reply.split(/\r?\n\r?\n/);
     if (responses.length > 1) {
       addReplyHistory = false;
@@ -38,7 +38,7 @@ exports.openApi = async (stateFuncs, msg, openai, model) => {
     })
 
     // Replies of excessive length excluded to ensure that subsequent requests
-    // don't breach the limit at the ChatGPT model level.
+    // don't breach the limit at the AI model level.
     if (addReplyHistory) {
       state.chatMessages = stateFuncs.addMessage("assistant", reply);
     }
