@@ -67,6 +67,10 @@
         {
             "name": "!grok",
             "description": "Switch DeathBot to Grok."
+        }, 
+        {
+            "name": "!paint [prompt]",
+            "description": "Generates an image based on the specified prompt."
         }
     ]
 }
