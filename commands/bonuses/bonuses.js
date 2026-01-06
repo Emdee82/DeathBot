@@ -22,6 +22,7 @@ module.exports = {
     playerKeys.forEach((playerId) => {
       let player = state.players[playerId];
       let output = format.bold(player.name);
+      let outputSuffix = "";
       let bonuses = Object.keys(player.bonuses);
       if (bonuses.length > 0) {
         wonSomething = true;
@@ -30,18 +31,24 @@ module.exports = {
           let celebs = format.stringCommaList(
             player.bonuses[bonusKey].celebs.map((x) => state.celebs[x].name)
           );
-          output =
-            output +
-            `\n - Won '${format.bold(
-                bonus.name
-            )}' (${player.bonuses[bonusKey].times <= 1 ? "+"+bonus.points : player.bonuses[bonusKey].times+"*"+bonus.points} points) for picking ${celebs}.`;
+          outputSuffix =
+            outputSuffix +
+            `\n \\- Won '${format.bold(bonus.name)}' (${
+              player.bonuses[bonusKey].times <= 1
+                ? "+" + bonus.points
+                : player.bonuses[bonusKey].times + "*" + bonus.points
+            } points) for picking ${celebs}.`;
         });
-        msg.channel.send(output + "\n");
+        msg.channel.send(output + outputSuffix + "\n");
       }
     });
 
     if (!wonSomething) {
-      msg.channel.send(`... ${args[0] ? players[playerKeys[0]].name + " hasn't" : "Nobody's"} won anything.`);
+      msg.channel.send(
+        `... ${
+          args[0] ? players[playerKeys[0]].name + " hasn't" : "Nobody's"
+        } won anything.`
+      );
     }
   },
 };
