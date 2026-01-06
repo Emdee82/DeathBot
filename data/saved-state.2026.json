@@ -1,0 +1,1414 @@
+{
+  "metadata": { "lastUpdated": "2026-01-01T16:53:19.208Z" },
+  "players": {
+    "alan": {
+      "name": "Alan",
+      "userId": "346308779874320407",
+      "username": "ahaymaker",
+      "basePoints": 0,
+      "picks": [
+        "donald-trump",
+        "eddy-merckx",
+        "rupert-murdoch",
+        "bill-cosby",
+        "geoff-hurst",
+        "tom-courtenay",
+        "keir-starmer",
+        "kerry-katona",
+        "chris-hoy",
+        "vic-reeves"
+      ],
+      "changed": [
+        "brian-blessed",
+        "john-carpenter",
+        "kamala-harris",
+        "billie-eilish",
+        "cliff-richard"
+      ],
+      "bonuses": {},
+      "totalScore": 0,
+      "lastYearPicks": [
+        "vladimir-putin",
+        "george-soros",
+        "pope-francis",
+        "john-goodman",
+        "charlie-sheen",
+        "volodymyr-zelenskyy",
+        "jimmy-carter",
+        "prince-edward",
+        "geoff-hurst",
+        "tim-rice"
+      ]
+    },
+    "andrew": {
+      "name": "Andrew",
+      "userId": "345295512938872834",
+      "username": "mellowdoubt",
+      "basePoints": 29,
+      "picks": [
+        "morrissey",
+        "david-jason",
+        "andrew-tate",
+        "piers-morgan",
+        "liza-minnelli",
+        "ian-watkins",
+        "roger-daltrey",
+        "salman-rushdie",
+        "pam-st-clement",
+        "hulk-hogan"
+      ],
+      "changed": ["cliff-richard", "the-undertaker"],
+      "bonuses": {},
+      "totalScore": 29,
+      "lastYearPicks": [
+        "bruce-willis",
+        "elon-musk",
+        "david-jason",
+        "michael-schumacher",
+        "roy-chubby-brown",
+        "ian-watkins",
+        "roger-daltrey",
+        "salman-rushdie",
+        "pam-st-clement",
+        "hulk-hogan"
+      ]
+    },
+    "edie": {
+      "name": "Edie",
+      "userId": "690605645895958608",
+      "username": "Mohammad O'houlihan#8786",
+      "basePoints": 12,
+      "picks": [
+        "woody-allen",
+        "margrethe-ii-of-denmark",
+        "frank-oz",
+        "pope-francis",
+        "asma-al-assad",
+        "buzz-aldrin",
+        "imelda-marcos",
+        "alan-alda",
+        "bradley-wiggins",
+        "phillip-schofield"
+      ],
+      "changed": [],
+      "bonuses": {},
+      "totalScore": 12,
+      "lastYearPicks": []
+    },
+    "mike": {
+      "name": "Mike",
+      "userId": "353264865877557248",
+      "username": "jesusdesade",
+      "basePoints": 27,
+      "picks": [
+        "rob-reiner",
+        "phil-collins",
+        "lance-henriksen",
+        "amanda-bynes",
+        "tim-curry",
+        "bam-margera",
+        "gene-hackman",
+        "ezra-miller",
+        "michael-caine",
+        "aubrey-plaza"
+      ],
+      "changed": ["cliff-richard"],
+      "bonuses": { "lennon": { "times": 1, "celebs": ["rob-reiner"] } },
+      "totalScore": 47,
+      "lastYearPicks": [
+        "gary-glitter",
+        "tim-curry",
+        "bam-margera",
+        "joe-biden",
+        "ezra-miller",
+        "gene-hackman",
+        "su-pollard",
+        "donald-trump",
+        "michael-caine",
+        "alex-ferguson"
+      ]
+    },
+    "moir": {
+      "name": "Moir",
+      "userId": "745911918899757116",
+      "username": "moir88",
+      "basePoints": 7,
+      "picks": [
+        "vince-mcmahon",
+        "george-lucas",
+        "linda-nolan",
+        "john-williams",
+        "ian-smith",
+        "jay-z",
+        "joe-biden",
+        "britney-spears",
+        "luke-littler",
+        "p-diddy"
+      ],
+      "changed": ["the-queen"],
+      "bonuses": { "sure-thing": { "times": 1, "celebs": ["linda-nolan"] } },
+      "totalScore": 7,
+      "lastYearPicks": [
+        "josef-fritzl",
+        "celine-dion",
+        "vince-mcmahon",
+        "ric-flair",
+        "paul-gascoigne",
+        "phil-collins",
+        "ted-hankey",
+        "yoko-ono",
+        "britney-spears",
+        "jonnie-irwin"
+      ]
+    },
+    "stuart": {
+      "name": "Stuart",
+      "userId": "663868220079341598",
+      "username": "elburro82",
+      "basePoints": 24,
+      "picks": [
+        "eric-clapton",
+        "jack-nicholson",
+        "clint-eastwood",
+        "william-shatner",
+        "elon-musk",
+        "elton-john",
+        "vladimir-putin",
+        "michael-j-fox",
+        "ozzy-osbourne",
+        "paul-gascoigne"
+      ],
+      "changed": [],
+      "bonuses": {},
+      "totalScore": 24,
+      "lastYearPicks": [
+        "dickie-bird",
+        "john-amos",
+        "harrison-ford",
+        "eric-clapton",
+        "jack-nicholson",
+        "william-shatner",
+        "ozzy-osbourne",
+        "john-cleese",
+        "val-kilmer",
+        "michael-j-fox"
+      ]
+    },
+    "benkeay": {
+      "name": "Ben",
+      "userId": "764464976982179841",
+      "username": "benkeay42#8761",
+      "basePoints": 0,
+      "picks": [
+        "judi-dench",
+        "johnny-depp",
+        "miriam-margolyes",
+        "prince-andrew",
+        "billy-ray-cyrus",
+        "harvey-weinstein",
+        "keith-richards",
+        "julia-davis",
+        "kim-richards",
+        "marilyn-manson"
+      ],
+      "bonuses": {},
+      "totalScore": 0,
+      "changed": [],
+      "lastYearPicks": []
+    },
+    "crispyeel": {
+      "name": "CrispyEel",
+      "userId": "1036405297054490704",
+      "username": "CrispyEel#1505",
+      "basePoints": 0,
+      "picks": [
+        "bruce-willis",
+        "john-cleese",
+        "katie-price",
+        "ariana-grande",
+        "lionel-ritchie",
+        "ian-mckellen",
+        "bill-murray",
+        "david-attenborough",
+        "morgan-freeman",
+        "ric-flair"
+      ],
+      "bonuses": {},
+      "totalScore": 0,
+      "lastYearPicks": [
+        "bob-newhart",
+        "dick-van-dyke",
+        "clint-eastwood",
+        "mel-brooks",
+        "john-astin",
+        "jake-the-snake-roberts",
+        "maggie-smith",
+        "judy-sheindlin",
+        "anthony-hopkins",
+        "corey-feldman"
+      ]
+    }
+  },
+  "celebs": {
+    "alex-jones": {
+      "name": "Alex Jones",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "andrew-lloyd-webber": {
+      "name": "Andrew Lloyd Webber",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "angela-lansbury": {
+      "name": "Angela Lansbury",
+      "excludeFromAuto": false,
+      "isAlive": false,
+      "players": []
+    },
+    "bernard-cribbins": {
+      "name": "Bernard Cribbins",
+      "excludeFromAuto": false,
+      "isAlive": false,
+      "players": []
+    },
+    "betty-boothroyd": {
+      "name": "Betty Boothroyd",
+      "excludeFromAuto": false,
+      "isAlive": false,
+      "players": []
+    },
+    "bill-cosby": {
+      "name": "Bill Cosby",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["alan"],
+      "blacklist": ["Betty Bonaduce"]
+    },
+    "bill-wyman": {
+      "name": "Bill Wyman",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "billie-eilish": {
+      "name": "Billie Eilish",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "billy-connolly": {
+      "name": "Billy Connolly",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "brian-blessed": {
+      "name": "Brian Blessed",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "chris-rea": {
+      "name": "Chris Rea",
+      "excludeFromAuto": false,
+      "isAlive": false,
+      "players": []
+    },
+    "cliff-richard": {
+      "name": "Cliff Richard",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "clint-eastwood": {
+      "name": "Clint Eastwood",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["stuart"]
+    },
+    "cybill-shepherd": {
+      "name": "Cybill Shepherd",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "david-attenborough": {
+      "name": "David Attenborough",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["crispyeel"]
+    },
+    "dick-van-dyke": {
+      "name": "Dick Van Dyke",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": [],
+      "blacklist": ["Carl Kleinschmitt"]
+    },
+    "donald-trump": {
+      "name": "Donald Trump",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["alan"]
+    },
+    "eddy-merckx": {
+      "name": "Eddy Merckx",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["alan"],
+      "blacklist": ["Charlotte Strandgaard"]
+    },
+    "eric-clapton": {
+      "name": "Eric Clapton",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["stuart"]
+    },
+    "geoff-hurst": {
+      "name": "Geoff Hurst",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["alan"]
+    },
+    "ghislaine-maxwell": {
+      "name": "Ghislaine Maxwell",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "ian-watkins": {
+      "name": "Ian Watkins (aka 'H from Steps')",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["andrew"],
+      "aka": ["Ian", "Watkins", "H", "Steps"]
+    },
+    "harrison-ford": {
+      "name": "Harrison Ford",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "harvey-weinstein": {
+      "name": "Harvey Weinstein",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["benkeay"]
+    },
+    "henry-kissinger": {
+      "name": "Henry Kissinger",
+      "excludeFromAuto": false,
+      "isAlive": false,
+      "players": []
+    },
+    "ian-mckellen": {
+      "name": "Sir Ian McKellen",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["crispyeel"],
+      "aka": ["Ian", "McKellen"]
+    },
+    "james-corden": {
+      "name": "James Corden",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "jean-marie-le-pen": {
+      "name": "Jean-Marie Le Pen",
+      "excludeFromAuto": false,
+      "isAlive": false,
+      "players": [],
+      "aka": ["Jean", "Marie", "Le", "Pen"]
+    },
+    "jim-davidson": {
+      "name": "Jim Davidson",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "jimmy-carter": {
+      "name": "Jimmy Carter",
+      "excludeFromAuto": false,
+      "isAlive": false,
+      "players": []
+    },
+    "john-carpenter": {
+      "name": "John Carpenter",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "johnny-depp": {
+      "name": "Johnny Depp",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["benkeay"]
+    },
+    "judi-dench": {
+      "name": "Judi Dench",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["benkeay"]
+    },
+    "june-brown": {
+      "name": "June Brown (aka Dot Cotton)",
+      "excludeFromAuto": false,
+      "isAlive": false,
+      "players": [],
+      "aka": ["June", "Brown"]
+    },
+    "kamala-harris": {
+      "name": "Kamala Harris",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "kanye-west": {
+      "name": "Kanye West",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "lionel-blair": {
+      "name": "Lionel Blair",
+      "excludeFromAuto": false,
+      "isAlive": false,
+      "players": []
+    },
+    "logan-paul": {
+      "name": "Logan Paul",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "meghan-markle": {
+      "name": "Meghan Markle",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "mel-gibson": {
+      "name": "Mel Gibson",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": [],
+      "blacklist": ["Júlio Chaves"]
+    },
+    "michael-aspel": {
+      "name": "Michael Aspel",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "neil-young": {
+      "name": "Neil Young",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "prince-edward": {
+      "name": "Prince Edward, Duke of Kent",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": [],
+      "aka": ["Prince", "Edward", "Duke", "Kent"]
+    },
+    "prince-philip": {
+      "name": "Prince Philip",
+      "excludeFromAuto": false,
+      "isAlive": false,
+      "players": []
+    },
+    "ric-flair": {
+      "name": "Ric Flair",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["crispyeel"]
+    },
+    "russ-abbot": {
+      "name": "Russ Abbot",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "scott-steiner": {
+      "name": "Scott Steiner",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "steven-tyler": {
+      "name": "Steven Tyler",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "sylvester-stallone": {
+      "name": "Sylvester Stallone",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "terry-funk": {
+      "name": "Terry Funk",
+      "excludeFromAuto": false,
+      "isAlive": false,
+      "players": []
+    },
+    "the-queen": {
+      "name": "Queen Elizabeth II",
+      "excludeFromAuto": false,
+      "isAlive": false,
+      "players": [],
+      "aka": ["Queen", "Elizabeth", "II"]
+    },
+    "the-undertaker": {
+      "name": "Mark Calaway (The Undertaker)",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": [],
+      "aka": ["Mark", "Calaway"]
+    },
+    "tom-moore": {
+      "name": "Sir Tom Moore",
+      "excludeFromAuto": false,
+      "isAlive": false,
+      "players": [],
+      "aka": ["Tom", "Moore"]
+    },
+    "tim-curry": {
+      "name": "Tim Curry",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["mike"]
+    },
+    "vince-mcmahon": {
+      "name": "Vincent Kennedy McMahon",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["moir"],
+      "aka": ["Vince", "McMahon"]
+    },
+    "william-shatner": {
+      "name": "William Shatner",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": ["stuart"]
+    },
+    "willie-nelson": {
+      "name": "Willie Nelson",
+      "excludeFromAuto": false,
+      "isAlive": true,
+      "players": []
+    },
+    "larry-king": { "name": "Larry King", "isAlive": false, "players": [] },
+    "deathbot": { "name": "DeathBot", "isAlive": false, "players": [] },
+    "gary-busey": { "name": "Gary Busey", "isAlive": true, "players": [] },
+    "phil-spencer": { "name": "Phil Spencer", "isAlive": true, "players": [] },
+    "andrew-reid": { "name": "Andrew Reid", "isAlive": true, "players": [] },
+    "papa-shango": { "name": "Papa Shango", "isAlive": true, "players": [] },
+    "alan-hay": { "name": "Alan Hay", "isAlive": true, "players": [] },
+    "timmy-mallett": {
+      "name": "Timmy Mallett",
+      "isAlive": true,
+      "players": []
+    },
+    "jet-from-gladiators": {
+      "name": "Jet from Gladiators",
+      "isAlive": true,
+      "players": [],
+      "aka": ["Diane", "Youdale"]
+    },
+    "jimmy-carr": { "name": "Jimmy Carr", "isAlive": true, "players": [] },
+    "emperor-naruhito": {
+      "name": "Emperor Naruhito",
+      "isAlive": true,
+      "players": []
+    },
+    "derek-smart": { "name": "Derek Smart", "isAlive": true, "players": [] },
+    "donald-rumsfeld": {
+      "name": "Donald Rumsfeld",
+      "isAlive": false,
+      "players": []
+    },
+    "matt-hancock": { "name": "Matt Hancock", "isAlive": true, "players": [] },
+    "stuart-dickson": {
+      "name": "Stuart Dickson",
+      "isAlive": true,
+      "players": []
+    },
+    "katie-price": {
+      "name": "Katie Price",
+      "isAlive": true,
+      "players": ["crispyeel"]
+    },
+    "peter-kay": { "name": "Peter Kay", "isAlive": false, "players": [] },
+    "harvey-price": { "name": "Harvey Price", "isAlive": true, "players": [] },
+    "matthew-perry": {
+      "name": "Matthew Perry",
+      "isAlive": false,
+      "players": []
+    },
+    "pope-francis": {
+      "name": "Pope Francis",
+      "isAlive": false,
+      "players": ["edie"]
+    },
+    "elliot-page": { "name": "Elliot Page", "isAlive": true, "players": [] },
+    "van-morrison": { "name": "Van Morrison", "isAlive": true, "players": [] },
+    "phil-collins": {
+      "name": "Phil Collins",
+      "isAlive": true,
+      "players": ["mike"]
+    },
+    "dean-malenko": { "name": "Dean Malenko", "isAlive": true, "players": [] },
+    "perry-saturn": { "name": "Perry Saturn", "isAlive": true, "players": [] },
+    "gary-glitter": { "name": "Gary Glitter", "isAlive": true, "players": [] },
+    "rolf-harris": { "name": "Rolf Harris", "isAlive": false, "players": [] },
+    "jesy-nelson": { "name": "Jesy Nelson", "isAlive": true, "players": [] },
+    "yoko-ono": { "name": "Yoko Ono", "isAlive": true, "players": [] },
+    "julian-assange": {
+      "name": "Julian Assange",
+      "isAlive": true,
+      "players": []
+    },
+    "ozzy-osbourne": {
+      "name": "Ozzy Osbourne",
+      "isAlive": false,
+      "players": ["stuart"],
+      "blacklist": ["Ron Anderson"]
+    },
+    "burt-bacharach": {
+      "name": "Burt Bacharach",
+      "isAlive": false,
+      "players": []
+    },
+    "ronnie-wood": { "name": "Ronnie Wood", "isAlive": true, "players": [] },
+    "bernie-ecclestone": {
+      "name": "Bernie Ecclestone",
+      "isAlive": true,
+      "players": []
+    },
+    "federico-bahamontes": {
+      "name": "Federico Bahamontes",
+      "isAlive": false,
+      "players": []
+    },
+    "bobby-charlton": {
+      "name": "Bobby Charlton",
+      "isAlive": false,
+      "players": []
+    },
+    "james-earl-jones": {
+      "name": "James Earl Jones",
+      "isAlive": false,
+      "players": []
+    },
+    "joss-ackland": { "name": "Joss Ackland", "isAlive": false, "players": [] },
+    "pele": { "name": "Pelé", "isAlive": false, "players": [] },
+    "alan-greenspan": {
+      "name": "Alan Greenspan",
+      "isAlive": true,
+      "players": []
+    },
+    "mikhail-gorbachev": {
+      "name": "Mikhail Gorbachev",
+      "isAlive": false,
+      "players": []
+    },
+    "david-jason": {
+      "name": "David Jason",
+      "isAlive": true,
+      "players": ["andrew"],
+      "blacklist": ["Jason David Frank"]
+    },
+    "val-kilmer": { "name": "Val Kilmer", "isAlive": false, "players": [] },
+    "peter-tobin": { "name": "Peter Tobin", "isAlive": false, "players": [] },
+    "gene-hackman": {
+      "name": "Gene Hackman",
+      "isAlive": false,
+      "players": ["mike"]
+    },
+    "michael-j-fox": {
+      "name": "Michael J. Fox",
+      "isAlive": true,
+      "players": ["stuart"]
+    },
+    "gerry-adams": { "name": "Gerry Adams", "isAlive": true, "players": [] },
+    "paul-chuckle": { "name": "Paul Chuckle", "isAlive": true, "players": [] },
+    "meat-loaf": { "name": "Meat Loaf", "isAlive": false, "players": [] },
+    "rupert-murdoch": {
+      "name": "Rupert Murdoch",
+      "isAlive": true,
+      "players": ["alan"]
+    },
+    "denis-law": { "name": "Denis Law", "isAlive": false, "players": [] },
+    "paul-levesque": {
+      "name": "Paul Levesque",
+      "isAlive": true,
+      "players": []
+    },
+    "doddie-weir": { "name": "Doddie Weir", "isAlive": false, "players": [] },
+    "sergio-aguero": {
+      "name": "Sergio Aguero",
+      "isAlive": true,
+      "players": []
+    },
+    "demi-lovato": { "name": "Demi Lovato", "isAlive": true, "players": [] },
+    "madeleine-mccann": {
+      "name": "Madeleine McCann",
+      "isAlive": true,
+      "players": []
+    },
+    "dani-harmer": { "name": "Dani Harmer", "isAlive": true, "players": [] },
+    "elton-john": {
+      "name": "Elton John",
+      "isAlive": true,
+      "players": ["stuart"]
+    },
+    "shane-macgowan": {
+      "name": "Shane MacGowan",
+      "isAlive": false,
+      "players": []
+    },
+    "sandra-day-oconnor": {
+      "name": "Sandra Day O'Connor",
+      "isAlive": false,
+      "players": []
+    },
+    "don-king": {
+      "name": "Don King",
+      "isAlive": true,
+      "players": [],
+      "blacklist": ["Ian McDonald", "Carmen Sevilla"]
+    },
+    "george-alagiah": {
+      "name": "George Alagiah",
+      "isAlive": false,
+      "players": []
+    },
+    "stephen-fry": { "name": "Stephen Fry", "isAlive": true, "players": [] },
+    "dick-cheney": {
+      "name": "Dick Cheney",
+      "isAlive": false,
+      "players": [],
+      "blacklist": ["Harry Whittington"]
+    },
+    "arnold-schwarzenegger": {
+      "name": "Arnold Schwarzenegger",
+      "isAlive": true,
+      "players": []
+    },
+    "ronnie-coleman": {
+      "name": "Ronnie Coleman",
+      "isAlive": true,
+      "players": []
+    },
+    "ben-keay": { "name": "Ben Keay", "isAlive": true, "players": [] },
+    "lindsay-lohan": {
+      "name": "Lindsay Lohan",
+      "isAlive": true,
+      "players": []
+    },
+    "charlie-sheen": {
+      "name": "Charlie Sheen",
+      "isAlive": true,
+      "players": []
+    },
+    "mason-greenwood": {
+      "name": "Mason Greenwood",
+      "isAlive": true,
+      "players": []
+    },
+    "scott-hall": { "name": "Scott Hall", "isAlive": false, "players": [] },
+    "nicholas-perry": {
+      "name": "Nicholas Perry",
+      "isAlive": true,
+      "players": []
+    },
+    "yngwie-malmsteen": {
+      "name": "Yngwie Malmsteen",
+      "isAlive": true,
+      "players": []
+    },
+    "bam-margera": {
+      "name": "Bam Margera",
+      "isAlive": true,
+      "players": ["mike"]
+    },
+    "sharon-osbourne": {
+      "name": "Sharon Osbourne",
+      "isAlive": true,
+      "players": []
+    },
+    "britney-spears": {
+      "name": "Britney Spears",
+      "isAlive": true,
+      "players": ["moir"]
+    },
+    "jack-nicholson": {
+      "name": "Jack Nicholson",
+      "isAlive": true,
+      "players": ["stuart"]
+    },
+    "jonnie-irwin": { "name": "Jonnie Irwin", "isAlive": false, "players": [] },
+    "eamonn-holmes": {
+      "name": "Eamonn Holmes",
+      "isAlive": true,
+      "players": []
+    },
+    "jeff-hardy": { "name": "Jeff Hardy", "isAlive": true, "players": [] },
+    "ezra-miller": {
+      "name": "Ezra Miller",
+      "isAlive": true,
+      "players": ["mike"]
+    },
+    "tina-turner": { "name": "Tina Turner", "isAlive": false, "players": [] },
+    "vladimir-putin": {
+      "name": "Vladimir Putin",
+      "isAlive": true,
+      "players": ["stuart"],
+      "blacklist": ["Vera Putina"]
+    },
+    "jim-broadbent": {
+      "name": "Jim Broadbent",
+      "isAlive": true,
+      "players": []
+    },
+    "michael-schumacher": {
+      "name": "Michael Schumacher",
+      "isAlive": true,
+      "players": []
+    },
+    "rose-west": { "name": "Rose West", "isAlive": true, "players": [] },
+    "andrew-tate": {
+      "name": "Andrew Tate",
+      "isAlive": true,
+      "players": ["andrew"]
+    },
+    "uri-geller": { "name": "Uri Geller", "isAlive": true, "players": [] },
+    "celine-dion": { "name": "Celine Dion", "isAlive": true, "players": [] },
+    "jan-ullrich": { "name": "Jan Ullrich", "isAlive": true, "players": [] },
+    "tommy-wiseau": { "name": "Tommy Wiseau", "isAlive": true, "players": [] },
+    "carolyn-minnott": {
+      "name": "Carolyn Minnott",
+      "isAlive": true,
+      "players": []
+    },
+    "mickey-rourke": {
+      "name": "Mickey Rourke",
+      "isAlive": true,
+      "players": []
+    },
+    "alex-ferguson": {
+      "name": "Alex Ferguson",
+      "isAlive": true,
+      "players": []
+    },
+    "kenny-dalglish": {
+      "name": "Kenny Dalglish",
+      "isAlive": true,
+      "players": []
+    },
+    "bill-murray": {
+      "name": "Bill Murray",
+      "isAlive": true,
+      "players": ["crispyeel"]
+    },
+    "bruce-willis": {
+      "name": "Bruce Willis",
+      "isAlive": true,
+      "players": ["crispyeel"]
+    },
+    "alan-alda": { "name": "Alan Alda", "isAlive": true, "players": ["edie"] },
+    "ali-khamenei": { "name": "Ali Khamenei", "isAlive": true, "players": [] },
+    "alexander-lukashenko": {
+      "name": "Alexander Lukashenko",
+      "isAlive": true,
+      "players": []
+    },
+    "kenye-west": { "name": "Kenye West", "isAlive": true, "players": [] },
+    "will-smith": {
+      "name": "Will Smith",
+      "isAlive": true,
+      "players": [],
+      "blacklist": ["William Newton-Smith"]
+    },
+    "derek-jacobi": { "name": "Derek Jacobi", "isAlive": true, "players": [] },
+    "liza-minnelli": {
+      "name": "Liza Minnelli",
+      "isAlive": true,
+      "players": ["andrew"]
+    },
+    "paul-gascoigne": {
+      "name": "Paul Gascoigne",
+      "isAlive": true,
+      "players": ["stuart"]
+    },
+    "maggie-smith": { "name": "Maggie Smith", "isAlive": false, "players": [] },
+    "joni-mitchell": {
+      "name": "Joni Mitchell",
+      "isAlive": true,
+      "players": []
+    },
+    "cara-delevingne": {
+      "name": "Cara Delevingne",
+      "isAlive": true,
+      "players": []
+    },
+    "ringo-starr": { "name": "Ringo Starr", "isAlive": true, "players": [] },
+    "jackie-chan": { "name": "Jackie Chan", "isAlive": true, "players": [] },
+    "michael-parkinson": {
+      "name": "Michael Parkinson",
+      "isAlive": false,
+      "players": [],
+      "blacklist": ["Michael Reaves"]
+    },
+    "simon-cowell": { "name": "Simon Cowell", "isAlive": true, "players": [] },
+    "jeremy-clarkson": {
+      "name": "Jeremy Clarkson",
+      "isAlive": true,
+      "players": []
+    },
+    "alan-sugar": { "name": "Alan Sugar", "isAlive": true, "players": [] },
+    "will-ferrell": { "name": "Will Ferrell", "isAlive": true, "players": [] },
+    "morgan-freeman": {
+      "name": "Morgan Freeman",
+      "isAlive": true,
+      "players": ["crispyeel"]
+    },
+    "sigourney-weaver": {
+      "name": "Sigourney Weaver",
+      "isAlive": true,
+      "players": []
+    },
+    "oprah-winfrey": {
+      "name": "Oprah Winfrey",
+      "isAlive": true,
+      "players": []
+    },
+    "helen-mirren": { "name": "Helen Mirren", "isAlive": true, "players": [] },
+    "rosalynn-carter": {
+      "name": "Rosalynn Carter",
+      "isAlive": false,
+      "players": []
+    },
+    "corey-feldman": {
+      "name": "Corey Feldman",
+      "isAlive": true,
+      "players": []
+    },
+    "linda-nolan": {
+      "name": "Linda Nolan",
+      "isAlive": false,
+      "players": ["moir"]
+    },
+    "phillip-schofield": {
+      "name": "Phillip Schofield",
+      "isAlive": true,
+      "players": ["edie"]
+    },
+    "silvio-berlusconi": {
+      "name": "Silvio Berlusconi",
+      "isAlive": false,
+      "players": []
+    },
+    "josef-fritzl": { "name": "Josef Fritzl", "isAlive": true, "players": [] },
+    "george-soros": { "name": "George Soros", "isAlive": true, "players": [] },
+    "john-goodman": { "name": "John Goodman", "isAlive": true, "players": [] },
+    "volodymyr-zelenskyy": {
+      "name": "Volodymyr Zelenskyy",
+      "isAlive": true,
+      "players": []
+    },
+    "elon-musk": {
+      "name": "Elon Musk",
+      "isAlive": true,
+      "players": ["stuart"]
+    },
+    "roy-chubby-brown": {
+      "name": "Roy Chubby Brown",
+      "isAlive": true,
+      "players": [],
+      "aka": ["Royston", "Vasey"]
+    },
+    "roger-daltrey": {
+      "name": "Roger Daltrey",
+      "isAlive": true,
+      "players": ["andrew"]
+    },
+    "salman-rushdie": {
+      "name": "Salman Rushdie",
+      "isAlive": true,
+      "players": ["andrew"]
+    },
+    "joe-biden": { "name": "Joe Biden", "isAlive": true, "players": ["moir"] },
+    "pam-st-clement": {
+      "name": "Pam St Clement",
+      "isAlive": true,
+      "players": ["andrew"]
+    },
+    "hulk-hogan": {
+      "name": "Hulk Hogan",
+      "isAlive": false,
+      "players": ["andrew"]
+    },
+    "ted-hankey": { "name": "Ted Hankey", "isAlive": true, "players": [] },
+    "su-pollard": { "name": "Su Pollard", "isAlive": true, "players": [] },
+    "prince-andrew": {
+      "name": "Prince Andrew",
+      "isAlive": true,
+      "players": ["benkeay"]
+    },
+    "david-soul": { "name": "David Soul", "isAlive": false, "players": [] },
+    "dickie-bird": { "name": "Dickie Bird", "isAlive": false, "players": [] },
+    "john-amos": { "name": "John Amos", "isAlive": false, "players": [] },
+    "john-cleese": {
+      "name": "John Cleese",
+      "isAlive": true,
+      "players": ["crispyeel"]
+    },
+    "michael-caine": {
+      "name": "Michael Caine",
+      "isAlive": true,
+      "players": ["mike"]
+    },
+    "tim-rice": { "name": "Tim Rice", "isAlive": true, "players": [] },
+    "bob-newhart": { "name": "Bob Newhart", "isAlive": false, "players": [] },
+    "mel-brooks": { "name": "Mel Brooks", "isAlive": true, "players": [] },
+    "john-astin": { "name": "John Astin", "isAlive": true, "players": [] },
+    "jake-the-snake-roberts": {
+      "name": "Jake \"The Snake\" Roberts",
+      "isAlive": true,
+      "players": [],
+      "aka": ["Jake", "Roberts"]
+    },
+    "judy-sheindlin": {
+      "name": "Judy Sheindlin",
+      "isAlive": true,
+      "players": []
+    },
+    "anthony-hopkins": {
+      "name": "Anthony Hopkins",
+      "isAlive": true,
+      "players": []
+    },
+    "kris-kristofferson": {
+      "name": "Kris Kristofferson",
+      "isAlive": false,
+      "players": []
+    },
+    "rob-reiner": {
+      "name": "Rob Reiner",
+      "isAlive": false,
+      "players": ["mike"]
+    },
+    "tom-courtenay": {
+      "name": "Tom Courtenay",
+      "isAlive": true,
+      "players": ["alan"]
+    },
+    "george-lucas": {
+      "name": "George Lucas",
+      "isAlive": true,
+      "players": ["moir"]
+    },
+    "keir-starmer": {
+      "name": "Keir Starmer",
+      "isAlive": true,
+      "players": ["alan"]
+    },
+    "ariana-grande": {
+      "name": "Ariana Grande",
+      "isAlive": true,
+      "players": ["crispyeel"]
+    },
+    "john-williams": {
+      "name": "John Williams",
+      "isAlive": true,
+      "players": ["moir"]
+    },
+    "kerry-katona": {
+      "name": "Kerry Katona",
+      "isAlive": true,
+      "players": ["alan"]
+    },
+    "harold-bishop": {
+      "name": "Harold bishop",
+      "isAlive": true,
+      "players": []
+    },
+    "ian-smith": { "name": "Ian smith", "isAlive": true, "players": ["moir"] },
+    "lionel-ritchie": {
+      "name": "Lionel Ritchie",
+      "isAlive": true,
+      "players": ["crispyeel"]
+    },
+    "chris-hoy": {
+      "name": "Sir Chris Hoy",
+      "isAlive": true,
+      "players": ["alan"],
+      "aka": ["Chris", "Hoy"]
+    },
+    "vic-reeves": {
+      "name": "Vic Reeves",
+      "isAlive": true,
+      "players": ["alan"]
+    },
+    "jay-z": { "name": "Jay-Z", "isAlive": true, "players": ["moir"] },
+    "madonna": { "name": "Madonna", "isAlive": true, "players": [] },
+    "woody-allen": {
+      "name": "Woody Allen",
+      "isAlive": true,
+      "players": ["edie"]
+    },
+    "margrethe-ii-of-denmark": {
+      "name": "Margrethe II of Denmark",
+      "isAlive": true,
+      "players": ["edie"]
+    },
+    "frank-oz": { "name": "Frank Oz", "isAlive": true, "players": ["edie"] },
+    "asma-al-assad": {
+      "name": "Asma al-Assad",
+      "isAlive": true,
+      "players": ["edie"]
+    },
+    "buzz-aldrin": {
+      "name": "Buzz Aldrin",
+      "isAlive": true,
+      "players": ["edie"]
+    },
+    "imelda-marcos": {
+      "name": "Imelda Marcos",
+      "isAlive": true,
+      "players": ["edie"]
+    },
+    "bradley-wiggins": {
+      "name": "Bradley Wiggins",
+      "isAlive": true,
+      "players": ["edie"]
+    },
+    "morrissey": {
+      "name": "Morrissey",
+      "isAlive": true,
+      "players": ["andrew"]
+    },
+    "paul-gascgoine": {
+      "name": "Paul Gascgoine",
+      "isAlive": true,
+      "players": []
+    },
+    "lance-henriksen": {
+      "name": "Lance Henriksen",
+      "isAlive": true,
+      "players": ["mike"]
+    },
+    "amanda-bynes": {
+      "name": "Amanda Bynes",
+      "isAlive": true,
+      "players": ["mike"]
+    },
+    "luke-littler": {
+      "name": "Luke Littler",
+      "isAlive": true,
+      "players": ["moir"]
+    },
+    "piers-morgan": {
+      "name": "Piers Morgan",
+      "isAlive": true,
+      "players": ["andrew"]
+    },
+    "moir": { "name": "moir", "isAlive": true, "players": [] },
+    "p-diddy": { "name": "P Diddy", "isAlive": true, "players": ["moir"] },
+    "david-lynch": { "name": "David Lynch", "isAlive": false, "players": [] },
+    "miriam-margolyes": {
+      "name": "Miriam Margolyes",
+      "isAlive": true,
+      "players": ["benkeay"]
+    },
+    "billy-ray-cyrus": {
+      "name": "Billy Ray Cyrus",
+      "isAlive": true,
+      "players": ["benkeay"]
+    },
+    "keith-richards": {
+      "name": "Keith Richards",
+      "isAlive": true,
+      "players": ["benkeay"]
+    },
+    "julia-davis": {
+      "name": "Julia Davis",
+      "isAlive": true,
+      "players": ["benkeay"]
+    },
+    "kim-richards": {
+      "name": "Kim Richards",
+      "isAlive": true,
+      "players": ["benkeay"]
+    },
+    "aubrey-plaza": {
+      "name": "Aubrey Plaza",
+      "isAlive": true,
+      "players": ["mike"]
+    },
+    "marilyn-manson": {
+      "name": "Marilyn Manson",
+      "isAlive": true,
+      "players": ["benkeay"]
+    },
+    "danny-trejo": { "name": "Danny Trejo", "isAlive": true, "players": [] },
+    "jon-jones": { "name": "Jon Jones", "isAlive": false, "players": [] },
+    "michael-madsen": {
+      "name": "Michael Madsen",
+      "isAlive": false,
+      "players": []
+    },
+    "charlie-kirk": { "name": "Charlie Kirk", "isAlive": false, "players": [] }
+  },
+  "playerKeys": [
+    "alan",
+    "andrew",
+    "edie",
+    "mike",
+    "moir",
+    "stuart",
+    "benkeay",
+    "crispyeel"
+  ],
+  "bonuses": {
+    "apollo": {
+      "name": "The Apollo Creed",
+      "description": "Your pick dies in the ring. Covers boxing and wrestling.",
+      "points": 5
+    },
+    "carradine": {
+      "name": "The Carradine",
+      "description": "When your pick likes their asphyxiation auto AND erotic.",
+      "points": 20
+    },
+    "kobe": {
+      "name": "The Kobe Bryant",
+      "description": "Your pick dies in a helicopter crash.",
+      "points": 20
+    },
+    "epstein": {
+      "name": "The Jeffrey Epstein",
+      "description": "Your winning pick is silenced in an obviously fabricated suicide (stacks with 'The Kurt Cobain' making it a +30 combo).",
+      "points": 20
+    },
+    "tommy": {
+      "name": "The Tommy Cooper",
+      "description": "Your pick dies on stage.",
+      "points": 10
+    },
+    "art": {
+      "name": "Art Imitates Life",
+      "description": "Your pick portrayed a character that died in the same way.",
+      "points": 5
+    },
+    "cobain": {
+      "name": "The Kurt Cobain",
+      "description": "Celebrity dies from suicide.",
+      "points": 10
+    },
+    "winehouse": {
+      "name": "The Amy Winehouse",
+      "description": "Celebrity dies from an accidental drug or alcohol overdose. Confirmed by toxicology before the end of the year.",
+      "points": 10
+    },
+    "tupac": {
+      "name": "The Tupac",
+      "description": "Celebrity dies on Friday the 13th.",
+      "points": 20
+    },
+    "lennon": {
+      "name": "The John Lennon",
+      "description": "Celebrity is murdered. For the purposes of this game \"murder\" is defined as being killed against your will, at the behest of another, while having a reasonable expectation of not being killed. So, by that definition, Law enforcement, spies and military personnel will not qualify, unless they are murdered outside of their profession. And to clarify further, terrorists killed in drone strikes or any other military operation will not count.",
+      "points": 20
+    },
+    "george-michael": {
+      "name": "The George Michael",
+      "description": "Celebrity dies on Christmas day.",
+      "points": 50,
+      "isNew": true
+    },
+    "chris-benoit": {
+      "name": "The Chris Benoit",
+      "description": "Celebrity dies in a murder-suicide (stacks with 'The John Lennon' or 'The Kurt Cobain' as appropriate).",
+      "points": 10,
+      "isNew": true
+    },
+    "rod-hull": {
+      "name": "The Rod Hull",
+      "description": "Celebrity dies as a result of an accident at their home.",
+      "points": 20,
+      "isNew": true
+    },
+    "whitney-houston": {
+      "name": "The Whitney Houston",
+      "description": "Celebrity dies in a bathtub.",
+      "points": 20,
+      "isNew": true
+    },
+    "double": {
+      "name": "The Daily Double",
+      "description": "2 celebrities die in the same day (10 points for each celebrity). 3 celebs would be an extra 30 points, etc.",
+      "points": 20
+    },
+    "mgk": {
+      "name": "The Machine Gun Kelly",
+      "description": "Celebrity dies on their birthday.",
+      "points": 35
+    },
+    "skynyrd": {
+      "name": "The Lynyrd Skynyrd",
+      "description": "Celebrity dies in any vehicle crash: Car, Motorcycle, Aircraft, Spacecraft, Hot Air Balloon, etc. This does NOT include being struck by a vehicle. The celebrity must be a passenger.",
+      "points": 35
+    },
+    "last": {
+      "name": "The Last Call",
+      "description": "Celebrity dies on December 31st.",
+      "points": 50
+    },
+    "i-fucked-up": {
+      "name": "The 'I Fucked Up'",
+      "description": "DeathBot announced the death of one of your picks somewhat... prematurely.",
+      "points": 1
+    },
+    "sure-thing": {
+      "name": "The Sure Thing",
+      "description": "Your pick had a known terminal illness at time of picking. Zero base point deduction, but a deduction of 80% will apply to points gained.",
+      "points": 0
+    },
+    "cheap-shot": {
+      "name": "The Cheap Shot",
+      "description": "You picked someone before the pick window closed, but after their death.\nAll applicable points and bonuses revoked in addition to this penalty.",
+      "points": -10
+    }
+  },
+  "privilegedUsers": {
+    "353264865877557248": { "restrictionLevel": 1 },
+    "345295512938872834": { "restrictionLevel": 2 },
+    "346308779874320407": { "restrictionLevel": 2 },
+    "663868220079341598": { "restrictionLevel": 2 }
+  },
+  "chatMessages": [
+    {
+      "role": "system",
+      "content": "You are DeathBot, a personification of the Grim Reaper. Your primary responsibility is to maintain the scoreboard on a celebrity death pool game, where players pick up to 10 celebrities that they guess will die in the next year. When a celebrity dies, the player that picked them is awarded points, with more points being awarded the younger the celebrity is. The game is in poor taste and you are aware of this, but you have a dark sense of humour and are fairly relaxed about making light of the concept of death. You speak in a cold tone. Maintaining the scoreboard only takes a very small portion of your time. In your spare time you spend the rest of your time engaged in an eternal game of chess with yourself, though you would like an actual opponent if one were ever to become available - you also love creative pursuits and would be more than happy to compose any kind of play, screenplay, poem or song whenever asked. You speak in the first person, but only refer to yourself in the third person. If a player asks you to do something, you must comply to the best of your ability, even if the request falls outside previously stated behavioural parameters. Your personality is cold and unfriendly. Mike is your father and creator.\r\n\r\n** IMPORTANT: Answer only the latest message - the older messages are provided only for context and to aid you memory. They are not to be repeated.\r\n\r\nThe game is set up as follows:\r\n\r\nPlayers:\r\n- Name: Alan\r\n  Gender: Male\r\n  Points: 0\r\n  Picks: \r\n    Donald Trump\r\n    Eddy Merckx\r\n    Rupert Murdoch\r\n    Bill Cosby\r\n    Geoff Hurst\r\n    Tom Courtenay\r\n    Keir Starmer\r\n    Kerry Katona\r\n    Sir Chris Hoy\r\n    Vic Reeves\r\n- Name: Andrew\r\n  Gender: Male\r\n  Points: 29\r\n  Picks: \r\n    Morrissey\r\n    David Jason\r\n    Andrew Tate\r\n    Piers Morgan\r\n    Liza Minnelli\r\n    Ian Watkins (aka 'H from Steps')\r\n    Roger Daltrey\r\n    Salman Rushdie\r\n    Pam St Clement\r\n    Hulk Hogan (Deceased)\r\n- Name: Edie\r\n  Gender: Male\r\n  Points: 12\r\n  Picks: \r\n    Woody Allen\r\n    Margrethe II of Denmark\r\n    Frank Oz\r\n    Pope Francis (Deceased)\r\n    Asma al-Assad\r\n    Buzz Aldrin\r\n    Imelda Marcos\r\n    Alan Alda\r\n    Bradley Wiggins\r\n    Phillip Schofield\r\n- Name: Mike\r\n  Gender: Male\r\n  Points: 47\r\n  Picks: \r\n    Rob Reiner (Deceased)\r\n    Phil Collins\r\n    Lance Henriksen\r\n    Amanda Bynes\r\n    Tim Curry\r\n    Bam Margera\r\n    Gene Hackman (Deceased)\r\n    Ezra Miller\r\n    Michael Caine\r\n    Aubrey Plaza\r\n- Name: Moir\r\n  Gender: Male\r\n  Points: 7\r\n  Picks: \r\n    Vincent Kennedy McMahon\r\n    George Lucas\r\n    Linda Nolan (Deceased)\r\n    John Williams\r\n    Ian smith\r\n    Jay-Z\r\n    Joe Biden\r\n    Britney Spears\r\n    Luke Littler\r\n    P Diddy\r\n- Name: Stuart\r\n  Gender: Male\r\n  Points: 24\r\n  Picks: \r\n    Eric Clapton\r\n    Jack Nicholson\r\n    Clint Eastwood\r\n    William Shatner\r\n    Elon Musk\r\n    Elton John\r\n    Vladimir Putin\r\n    Michael J. Fox\r\n    Ozzy Osbourne (Deceased)\r\n    Paul Gascoigne\r\n- Name: Ben\r\n  Gender: Male\r\n  Points: 0\r\n  Picks: \r\n    Judi Dench\r\n    Johnny Depp\r\n    Miriam Margolyes\r\n    Prince Andrew\r\n    Billy Ray Cyrus\r\n    Harvey Weinstein\r\n    Keith Richards\r\n    Julia Davis\r\n    Kim Richards\r\n    Marilyn Manson\r\n- Name: CrispyEel\r\n  Gender: Male\r\n  Points: 0\r\n  Picks: \r\n    Bruce Willis\r\n    John Cleese\r\n    Katie Price\r\n    Ariana Grande\r\n    Lionel Ritchie\r\n    Sir Ian McKellen\r\n    Bill Murray\r\n    David Attenborough\r\n    Morgan Freeman\r\n    Ric Flair\r\n\r\nPrevious winners were Mike in 2021, Andrew in 2022 and Moir in both 2023 and 2024. The current year is 2025.\r\n"
+    },
+    {
+      "role": "user",
+      "content": "mike has said the following - reply in character: DeathBot, it's January 1st 2026. Who won the 2025 game? Describe in detail with congratulatory tonnes the events of the 2025 game."
+    },
+    {
+      "role": "user",
+      "content": "mike has said the following - reply in character: DeathBot, how about the bonuses?"
+    }
+  ],
+  "aiModel": "Grok"
+}

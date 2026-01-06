@@ -1,76 +1,94 @@
 {
-    "commands": [
-        {
-            "name": "!commands",
-            "description": "Displays the list of commands"
-        },
-        {
-            "name": "!scores",
-            "description": "Displays the current scoreboard"
-        },
-        {
-            "name": "!picks",
-            "description": "Displays all player picks"
-        },
-        {
-            "name": "!picks [playerId]",
-            "description": "Displays the picks of an individual player"
-        },
-        {
-            "name": "!bonuses",
-            "description": "Displays the bonuses awarded to all players"
-        },
-        {
-            "name": "!bonuses [playerId]",
-            "description": "Displays the bonuses awarded to a particular player"
-        },
-        {
-            "name": "!bonus-list",
-            "description": "Displays the available bonuses"
-        },
-        {
-            "name": "!celeb [search-term]",
-            "description": "Query for a given celeb."
-        },
-        {
-            "name": "!add-celeb [name]",
-            "description": "Add a celeb to the list of those being tracked."
-        }
-    ],
-    "pickCommands": [
-        {
-            "name": "!pick [name]",
-            "description": "Adds a given celebrity to your list (also joins the game for new players)."
-        },
-        {
-            "name": "!remove-pick [name]",
-            "description": "Removes a given celebrity to your list."
-        },        
-        {
-            "name": "!carry-over",
-            "description": "Carries over all of your surviving picks from last year."
-        },        
-        {
-            "name": "!old-picks [player (optional)]",
-            "description": "See last year's picks to refresh your memory."
-        }
-    ],    
-    "aiCommands": [     
-        {
-            "name": "!ai",
-            "description": "See the currently selected AI model."
-        }, 
-        {
-            "name": "!gpt",
-            "description": "Switch DeathBot to Chat GPT."
-        }, 
-        {
-            "name": "!grok",
-            "description": "Switch DeathBot to Grok."
-        }, 
-        {
-            "name": "!paint [prompt]",
-            "description": "Generates an image based on the specified prompt."
-        }
-    ]
+  "commands": [
+    {
+      "name": "!commands",
+      "description": "Displays the list of commands"
+    },
+    {
+      "name": "!scores",
+      "description": "Displays the current scoreboard"
+    },
+    {
+      "name": "!picks",
+      "description": "Displays all player picks"
+    },
+    {
+      "name": "!picks [playerId]",
+      "description": "Displays the picks of an individual player"
+    },
+    {
+      "name": "!bonuses",
+      "description": "Displays the bonuses awarded to all players"
+    },
+    {
+      "name": "!bonuses [playerId]",
+      "description": "Displays the bonuses awarded to a particular player"
+    },
+    {
+      "name": "!bonus-list",
+      "description": "Displays the available bonuses"
+    },
+    {
+      "name": "!celeb [search-term]",
+      "description": "Query for a given celeb."
+    },
+    {
+      "name": "!add-celeb [name]",
+      "description": "Add a celeb to the list of those being tracked."
+    }
+  ],
+  "pickCommands": [
+    {
+      "name": "!pick [name]",
+      "description": "Adds a given celebrity to your list (also joins the game for new players)."
+    },
+    {
+      "name": "!remove-pick [name]",
+      "description": "Removes a given celebrity to your list."
+    },
+    {
+      "name": "!carry-over",
+      "description": "Carries over all of your surviving picks from last year."
+    },
+    {
+      "name": "!old-picks [player (optional)]",
+      "description": "See last year's picks to refresh your memory."
+    }
+  ],
+  "aiCommands": [
+    {
+      "name": "!ai",
+      "description": "See the currently selected AI model."
+    },
+    {
+      "name": "!gpt",
+      "description": "Switch DeathBot to Chat GPT."
+    },
+    {
+      "name": "!grok",
+      "description": "Switch DeathBot to Grok."
+    },
+    {
+      "name": "!paint [prompt]",
+      "description": "[**ALPHA - Only an old model available, so very poor quality!**] Generates an image based on the specified prompt."
+    }
+  ],
+  "commands2026": [
+    {
+      "name": "!protect",
+      "description": "Blocks one of your picks from a 'steal' attempts by another player, safeguarding your pick."
+    },
+    {
+      "name": "!unprotect",
+      "description": "Remove theft protection from one of your picks, allowing you to change your mind and protect another."
+    },
+    {
+      "name": "!steal [name]",
+      "description": "Steals a pick identified by the given celeb name from another player."
+    },
+    {
+      "name": "!unpick",
+      "description": "Removes one of our picks to make room for stealing/picking another one (same as 'remove-pick', but a bit more intuitive and easier to type)"
+    }
+  ]
 }
