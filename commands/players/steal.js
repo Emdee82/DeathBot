@@ -10,7 +10,7 @@ const { MessageEmbed } = require("discord.js");
 const PICK_LIMIT = process.env.PICK_LIMIT;
 const STEAL_LIMIT = process.env.STEAL_LIMIT;
 const PICK_CUTOFF_DATE = new Date(
-  process.env.PICK_CUTOFF_DATE + "T23:59:59.999"
+  process.env.PICK_CUTOFF_DATE + "T23:59:59.999",
 );
 const STEAL_START_DATE = new Date(process.env.STEAL_START_DATE);
 const ALLOW_SAME_PICK = process.env.ALLOW_SAME_PICK;
@@ -23,21 +23,21 @@ module.exports = {
   execute(msg, args, stateFuncs, channel) {
     if (+ALLOW_SAME_PICK) {
       msg.reply(
-        `Cannot steal - same picks from multiple players are already allowed.`
+        `Cannot steal - same picks from multiple players are already allowed.`,
       );
       return;
     }
 
     if (new Date() > PICK_CUTOFF_DATE) {
       msg.reply(
-        `No new picks are accepted after ${PICK_CUTOFF_DATE.toDateString()}.`
+        `No new picks are accepted after ${PICK_CUTOFF_DATE.toDateString()}.`,
       );
       return;
     }
 
     if (new Date() < STEAL_START_DATE) {
       msg.reply(
-        `Picks cannot be stolen until ${STEAL_START_DATE.toDateString()}.`
+        `Picks cannot be stolen until ${STEAL_START_DATE.toDateString()}.`,
       );
       return;
     }
@@ -54,16 +54,16 @@ module.exports = {
         stateFuncs,
         msg,
         msg.author.username,
-        newUserId
+        newUserId,
       );
       msg.channel.send(
-        `Welcome to the game, ${format.bold(msg.author.username + "!")}`
+        `Welcome to the game, ${format.bold(msg.author.username + "!")}`,
       );
     }
 
     if (stateFuncs.getState().players[playerId].picks.length >= +PICK_LIMIT) {
       msg.reply(
-        `You already have ${PICK_LIMIT} picks - please remove one first if you'd like to replace it.`
+        `You already have ${PICK_LIMIT} picks - please remove one first if you'd like to replace it.`,
       );
       return;
     }
@@ -79,7 +79,7 @@ module.exports = {
 
     if (!celeb) {
       msg.reply(
-        `${format.bold(celebName)} hasn't been added to the game at all yet.`
+        `${format.bold(celebName)} hasn't been added to the game at all yet.`,
       );
       return;
     }
@@ -89,8 +89,8 @@ module.exports = {
     if (!state.celebs[celeb].isAlive) {
       msg.reply(
         `${format.bold(
-          celebName
-        )} has already died - unable to steal scoring picks.`
+          celebName,
+        )} has already died - unable to steal scoring picks.`,
       );
       return;
     }
@@ -98,14 +98,14 @@ module.exports = {
     let player = { ...state.players[playerId] };
     if (player.picks.includes(celeb)) {
       msg.reply(
-        "It looks like you're trying to steal your own pick - there's no need for that."
+        "It looks like you're trying to steal your own pick - there's no need for that.",
       );
       return;
     }
 
     if (!state.celebs[celeb].players.length > 0) {
       msg.reply(
-        `${format.bold(celebName)} hasn't been picked by anyone to steal from!`
+        `${format.bold(celebName)} hasn't been picked by anyone to steal from!`,
       );
       return;
     }
@@ -122,12 +122,12 @@ module.exports = {
 
       channel.send(
         `${format.bold(
-          state.players[playerId].name
+          state.players[playerId].name,
         )} tried to steal ${format.bold(
-          celebName
+          celebName,
         )}, but this pick was ${format.bold("protected")} by ${format.bold(
-          owner.name
-        )}${msgSuffix}`
+          owner.name,
+        )}${msgSuffix}`,
       );
       return;
     }
@@ -142,10 +142,10 @@ module.exports = {
 
       channel.send(
         `${format.bold(
-          state.players[playerId].name
+          state.players[playerId].name,
         )} tried to steal ${format.bold(
-          celebName
-        )}, but this pick had previously been stolen from them and cannot be stolen back${msgSuffix}`
+          celebName,
+        )}, but this pick had previously been stolen from them and cannot be stolen back${msgSuffix}`,
       );
       return;
     }
@@ -163,13 +163,13 @@ module.exports = {
 
     let newCeleb = { ...state.celebs[celeb] };
     newCeleb.players = [playerId];
-    newCeleb.stolenFrom = [...(newCeleb.stolenFrom ?? []), ...ownerId];
+    newCeleb.stolenFrom = [...(newCeleb.stolenFrom ?? []), ownerId];
     stateFuncs.updateCeleb(celeb, newCeleb);
 
     channel.send(
       `${format.bold(state.players[playerId].name)} has stolen ${format.bold(
-        celebName
-      )} from ${format.bold(owner.name)}!`
+        celebName,
+      )} from ${format.bold(owner.name)}!`,
     );
 
     image.getImage(celebName).then((imgPath) => {
