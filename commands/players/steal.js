@@ -163,7 +163,7 @@ module.exports = {
 
     let newCeleb = { ...state.celebs[celeb] };
     newCeleb.players = [playerId];
-    newCeleb.stolenFrom = [...(newCeleb.stolenFrom ?? []), ...ownerId];
+    newCeleb.stolenFrom = [...(newCeleb.stolenFrom ?? []), ownerId];
     stateFuncs.updateCeleb(celeb, newCeleb);
 
     channel.send(
