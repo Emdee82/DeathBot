@@ -20,7 +20,12 @@ exports.getImage = (name) => {
       $("img").each(function (i, el) {
         let source = $(this).attr().src;
         if (source && source.includes("https://")) {
-          results.push(source);
+          const url = new URL(source);
+          const w = parseInt(url.searchParams.get("w")) || 0;
+          const h = parseInt(url.searchParams.get("h")) || 0;
+          if (w >= 100 && h >= 100) {
+            results.push(source);
+          }
         }
       });
 
