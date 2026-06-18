@@ -2,7 +2,7 @@ const find = require("../../common/find");
 const error = require("../../common/error");
 const format = require("../../common/format");
 const PICK_CUTOFF_DATE = new Date(
-  process.env.PICK_CUTOFF_DATE + "T23:59:59.999"
+  process.env.PICK_CUTOFF_DATE + "T23:59:59.999",
 );
 const ALLOW_SAME_PICK = process.env.ALLOW_SAME_PICK;
 const PROTECT_LIMIT = process.env.PROTECT_LIMIT;
@@ -15,14 +15,14 @@ module.exports = {
   execute(msg, args, stateFuncs) {
     if (+ALLOW_SAME_PICK) {
       msg.reply(
-        `Cannot protect - same picks from multiple players are already allowed.`
+        `Cannot protect - same picks from multiple players are already allowed.`,
       );
       return;
     }
 
     if (new Date() > PICK_CUTOFF_DATE) {
       msg.reply(
-        `No pick adjustments are accepted after ${PICK_CUTOFF_DATE.toDateString()}.`
+        `No pick adjustments are accepted after ${PICK_CUTOFF_DATE.toDateString()}.`,
       );
       return;
     }
@@ -37,7 +37,7 @@ module.exports = {
     let celebId = find.findCeleb(args, msg, stateFuncs, true);
     if (!celebId) {
       msg.reply(
-        `${format.bold(celebName)} hasn't been added to the game at all yet.`
+        `${format.bold(celebName)} hasn't been added to the game at all yet.`,
       );
       return;
     }
@@ -60,8 +60,8 @@ module.exports = {
     if (!celeb.isAlive) {
       msg.reply(
         `${format.bold(
-          celebName
-        )} has already died and can no longer be protected.`
+          celebName,
+        )} has already died and can no longer be protected.`,
       );
       return;
     }
@@ -70,7 +70,7 @@ module.exports = {
       stateFuncs.getState().players[playerId].protectCount >= +PROTECT_LIMIT
     ) {
       msg.reply(
-        `You have already protected as many picks as you are allowed.\nYou can first remove protection from another with \`!unprotect [name]\` if you've changed your mind..`
+        `You have already protected as many picks as you are allowed.\nYou can first remove protection from another with \`!unprotect [name]\` if you've changed your mind..`,
       );
       return;
     }
@@ -85,12 +85,14 @@ module.exports = {
 
     msg.reply(
       `${format.bold(celeb.name)} is now ${format.bold(
-        "protected"
-      )} from being stolen by other players.`
+        "protected",
+      )} from being stolen by other players.`,
     );
 
     image.getImage(celebName).then((imgPath) => {
-      const imageEmbed = new MessageEmbed().setImage(imgPath);
+      const imageEmbed = new MessageEmbed()
+        .setImage(imgPath)
+        .setDescription(celebName);
 
       msg.channel.send({ embeds: [imageEmbed] });
     });

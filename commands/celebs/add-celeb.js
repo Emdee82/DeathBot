@@ -1,7 +1,7 @@
 const error = require("../../common/error");
 const image = require("../../common/image-search");
 const celebAdder = require("../../common/add-celeb");
-const { MessageEmbed } = require('discord.js');
+const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "!add-celeb",
@@ -17,14 +17,16 @@ module.exports = {
     console.log("[add-celeb]: ", celebName);
 
     let newId = celebAdder.addCeleb(stateFuncs, msg, celebName);
-    msg.channel.send(`${celebName} has now been added to my list. (ID: ${newId})`);
+    msg.channel.send(
+      `${celebName} has now been added to my list. (ID: ${newId})`,
+    );
 
-    image.getImage(celebName)
-    .then(imgPath => {
-        const imageEmbed = new MessageEmbed()
-        .setImage(imgPath);
+    image.getImage(celebName).then((imgPath) => {
+      const imageEmbed = new MessageEmbed()
+        .setImage(imgPath)
+        .setDescription(celebName);
 
-        msg.channel.send({embeds: [imageEmbed]});
+      msg.channel.send({ embeds: [imageEmbed] });
     });
-  }
-}
+  },
+};

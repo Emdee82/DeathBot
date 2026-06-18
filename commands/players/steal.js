@@ -173,7 +173,9 @@ module.exports = {
     );
 
     image.getImage(celebName).then((imgPath) => {
-      const imageEmbed = new MessageEmbed().setImage(imgPath);
+      const imageEmbed = new MessageEmbed()
+        .setImage(imgPath)
+        .setDescription(celebName);
 
       channel.send({ embeds: [imageEmbed] });
     });
